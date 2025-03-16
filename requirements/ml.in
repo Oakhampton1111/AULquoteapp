@@ -1,0 +1,9 @@
+# ML dependencies
+transformers
+torch
+accelerate
+sentencepiece
+einops
+langchain
+faiss-cpu
+sentence-transformers

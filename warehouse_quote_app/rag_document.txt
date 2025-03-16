@@ -1,0 +1,257 @@
+# Application Overview
+
+The application is a FastAPI-based warehouse quote system that provides an authentication system, admin and customer portals, quote management, a rate card system, and AI-powered features using FLAN-T5.
+
+The key components of the application include:
+- FastAPI: The web framework used to build the application.
+- SQLAlchemy: The ORM used to interact with the database.
+- FLAN-T5: The language model used for natural language understanding and generation.
+- RateCalculator: A service for calculating storage and handling rates.
+- RAG System: Retrieval Augmented Generation for context-aware responses.
+
+The key components of the application include:
+- FastAPI: The web framework used to build the application.
+- SQLAlchemy: The ORM used to interact with the database.
+- Jinja2: The templating engine used to render the UI.
+- RateCalculator: A service for calculating storage and handling rates.
+- QuoteConversation: A class for handling NLP-based quote generation.
+
+Relevant files for context:
+- app/nlp/conversation.py: Handles NLP-based quote generation.
+- app/services/rate_calculator.py: Calculates storage and handling rates.
+- app/models/rate_card.py: Defines the rate card model.
+- app/routes/admin.py: Defines the admin routes.
+- app/routes/customer.py: Defines the customer routes.
+
+# Rate Card System
+
+The rate card system implements a flexible pricing framework for calculating storage and handling rates, now enhanced with AI-powered validation and optimization. The key components include:
+
+## Core Components
+- RateCard: Defines the base pricing configuration, service categorization, and time-based validity.
+- RateCardSettings: Defines the global pricing rules, tax configuration, and volume discounts.
+- CustomerRateCard: Defines the customer-specific pricing, custom discounts, and special handling fees.
+- RateCalculator: AI-enhanced service for calculating rates based on natural language inputs.
+
+## Rate Calculation Features
+The RateCalculator supports:
+- Natural language input processing
+- Automatic service type detection
+- Dynamic pricing optimization
+- Historical data analysis
+- Competitor price analysis
+
+## Calculation Methods
+- Bulky Storage:
+  - Per m² or m³ per week
+  - Location-based pricing
+  - Special handling requirements
+  
+- Pallet Storage:
+  - Per pallet per week
+  - Stack height considerations
+  - Access frequency adjustments
+  - Volume discounts
+  
+- Handling Fees:
+  - In/out handling
+  - Special equipment requirements
+  - Time-based surcharges
+  - Rush order premiums
+  
+- Container Packing:
+  - Size-based pricing (20ft/40ft)
+  - Personal effects vs corporate rates
+  - Labor calculations
+  - Equipment usage
+  
+- Delivery:
+  - Brisbane vs non-Brisbane pricing
+  - Vehicle type optimization
+  - Multi-drop options
+  - Timed delivery surcharges
+
+## Edge Cases Handled
+- Oversized items
+- High-value goods
+- Time-critical shipments
+- Complex multi-service quotes
+- Split delivery requirements
+- Long-term storage contracts
+
+# AI Integration
+
+The application features comprehensive AI integration using FLAN-T5 and RAG:
+
+## FLAN-T5 Features
+- Natural language understanding
+- Quote requirement extraction
+- Service recommendation
+- Price optimization
+- Customer communication
+- Document analysis
+
+## RAG System Components
+- Knowledge Base:
+  - Service descriptions
+  - Pricing guidelines
+  - Business rules
+  - Common scenarios
+  - Edge cases
+  - Customer FAQs
+
+## Rate Card Integration
+- Automatic rate validation
+- Quote optimization
+- Discount management
+- Compliance checking
+- Error detection
+
+## Customer Profiling
+- Service history analysis
+- Preference tracking
+- Usage patterns
+- Common requirements
+
+## Quote Generation
+- Requirement extraction
+- Service matching
+- Rate calculation
+- Discount application
+- Validation checks
+- Documentation generation
+
+## Business Rules
+- Rate card compliance
+- Discount limits
+- Service restrictions
+- Location-based rules
+- Volume thresholds
+- Special handling requirements
+
+## Error Prevention
+- Input validation
+- Rate verification
+- Discount checks
+- Service compatibility
+- Location validation
+- Equipment availability
+
+## Documentation
+- Quote details
+- Service descriptions
+- Rate breakdowns
+- Terms and conditions
+- Special requirements
+- Handling instructions
+
+## Reporting
+- Quote analytics
+- Service usage
+- Rate optimization
+- Customer patterns
+- Market trends
+- Operational metrics
+
+# Validation System
+
+The codebase implements a comprehensive type system and validation framework to ensure data integrity and business rule compliance. Key validation rules include:
+
+- Storage Requirements:
+    - Dimensions must be positive
+    - Palletized storage requires pallet count
+    - Handling requirements must be consistent
+- Quote Items:
+    - Positive quantities and prices
+    - Price decimal places limited to 2
+    - Required descriptions and types
+- Quotes:
+    - Future delivery dates
+    - At least one item required
+    - Valid status transitions
+    - Consistent price calculations
+
+# NLP Conversation System
+
+The NLP conversation system implements a guided quote generation flow using a state machine. The key states in the conversation flow include:
+
+- INIT: Initial state
+- SERVICE_SELECTION: Choose service type
+- PALLET_QUANTITY: Input pallet count
+- OVERSIZE_AREA: Input storage area
+- CONTAINER_TYPE: Select container type
+- HANDLING_SERVICES: Choose handling options
+- TRANSPORT_DETAILS: Input transport info
+- CONFIRMATION: Review and confirm
+- COMPLETE: Quote generated
+
+The QuoteConversation class manages the conversation state and context for quote generation.
+
+# Quote Lifecycle
+
+The quote lifecycle system implements a comprehensive workflow for quote management. The key states in the quote lifecycle include:
+
+- DRAFT: Initial creation
+- PENDING: Awaiting customer decision
+- ACCEPTED: Quote approved by customer
+- REJECTED: Quote declined with reason
+- EXPIRED: Quote past validity period
+- CANCELLED: Quote cancelled by system/admin
+
+The QuoteLifecycleService class provides methods for:
+- Quote creation and management
+- State transitions with validation
+- History tracking
+- Metrics and reporting
+
+# Design Patterns
+
+The application utilizes several key design patterns to promote modularity, maintainability, and flexibility. These include:
+
+- Builder Pattern: Used for constructing complex objects, such as quotes and rate cards.
+- State Machine Pattern: Used for managing the state of quotes and conversations.
+- Strategy Pattern: Used for implementing different rate calculation strategies based on storage type and customer.
+- Factory Pattern: Used for creating instances of different rate card types and quote components.
+- Validator Pattern: Used for implementing data validation rules and ensuring data integrity.
+- Observer Pattern: Used for implementing the notification system for quote status updates.
+
+# Customer Service Information
+
+The following information is relevant for customer service purposes, extracted from the AULogistics website (https://aulogistics.au/):
+
+- **Contact Information:**
+    - Phone: 07 2140 7604
+    - Address: 42b William Farrior Place, Eagle Farm QLD 4009
+- **Services Offered:**
+    - Warehousing
+    - 3PL (Third-Party Logistics)
+    - Hardstand
+    - Transport
+    - Destination Freight Handling
+    - Packing & Unpacking
+    - Project Logistics
+    - Export Consolidation
+- **Key Features:**
+    - Digitally enabled logistics provider with online stock position and pick order generation.
+    - Secure facility for handling all freight types, including high value and sensitive industrial freight.
+    - Competitive wholesale rates.
+    - State-of-the-art facility in Eagle Farm, Brisbane.
+    - 2,000 pallet bays, 3800sqm secure internal storage, and 2,500sqm (expandable) of clean cemented external storage.
+    - Located 5 mins from Brisbane Airport, 10 mins from the city, and 15k from the Port of Brisbane.
+
+# Configuration Settings
+
+The application relies on the following environment variables and configuration settings:
+
+- Database connection string (DATABASE_URL)
+- SMTP server settings (SMTP_SERVER, SMTP_PORT, SMTP_USERNAME, SMTP_PASSWORD)
+- Logging level (LOG_LEVEL)
+- API keys for external services (if any)
+
+# Testing
+
+The application uses pytest for testing. Key test cases include:
+
+- Rate calculations
+- Handling fees
+- Edge cases

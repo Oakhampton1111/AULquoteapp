@@ -1,0 +1,10 @@
+{
+  "nodes": [
+    {
+      "id": "LoginRequest",
+      "name": "LoginRequest",
+      "type": "interface",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\api\\auth.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": 

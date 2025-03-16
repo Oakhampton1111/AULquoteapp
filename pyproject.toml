@@ -1,0 +1,114 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aul-quote-app"
+version = "1.0.0"
+description = "AU Logistics Warehouse Quote System"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+    { name = "AU Logistics", email = "dev@aulogistics.com" }
+]
+dependencies = [
+    "fastapi>=0.100.0",
+    "uvicorn>=0.22.0",
+    "sqlalchemy>=2.0.0",
+    "alembic>=1.11.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "python-jose>=3.3.0",
+    "passlib>=1.7.4",
+    "python-multipart>=0.0.6",
+    "prometheus-client>=0.17.0",
+    "transformers>=4.30.0",
+    "torch>=2.0.0",
+    "sentence-transformers>=2.2.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.3.1",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.3.0",
+    "isort>=5.12.0",
+    "mypy>=1.3.0",
+    "ruff>=0.0.270"
+]
+
+[tool.pytest]
+env_files = [
+    "deployment/config/.env.test"
+]
+testpaths = [
+    "tests"
+]
+python_files = [
+    "test_*.py",
+    "*_test.py"
+]
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = ["tests.*"]
+disallow_untyped_defs = false
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
+include = '\.pyi?$'
+extend-exclude = '''
+# Exclude frontend directory
+(
+  frontend/.*
+)
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 100
+skip = ["frontend"]
+
+[tool.coverage.run]
+source = ["app"]
+omit = [
+    "tests/*",
+    "deployment/*",
+    "**/migrations/*",
+    "alembic/*"
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if __name__ == .__main__.:",
+    "raise NotImplementedError",
+    "if TYPE_CHECKING:",
+    "pass",
+    "\\.\\.\\.",
+    "raise ImportError",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py39"
+select = ["E", "F", "B", "I", "N", "UP", "PL", "RUF"]
+ignore = ["E501"]  # Line length is handled by black
+
+[tool.ruff.per-file-ignores]
+"tests/*" = ["N802", "N803", "N806"]  # Allow test-style naming
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]

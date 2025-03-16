@@ -1,0 +1,55 @@
+{
+  "name": "aul-quote-app",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "shared/*"
+  ],
+  "scripts": {
+    "start": "yarn workspace frontend start",
+    "build": "yarn workspace frontend build",
+    "test": "yarn workspace frontend test",
+    "test:e2e": "yarn workspace frontend test:e2e",
+    "test:unit": "yarn workspace frontend test:unit",
+    "test:coverage": "yarn workspace frontend test:coverage",
+    "lint": "yarn workspaces run lint",
+    "lint:fix": "yarn workspaces run lint:fix",
+    "format": "yarn workspaces run format",
+    "format:check": "yarn workspaces run format:check",
+    "type-check": "yarn workspaces run type-check",
+    "clean": "yarn workspaces run clean",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.0",
+    "typescript": "^4.9.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "yarn": ">=1.22.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@types/styled-components": "^5.1.34",
+    "styled-components": "^6.1.15"
+  }
+}

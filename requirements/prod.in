@@ -1,0 +1,11 @@
+# Include base requirements
+-r base.in
+
+# Include ML requirements
+-r ml.in
+
+# Production-specific dependencies
+gunicorn
+uvicorn[standard]
+python-json-logger
+sentry-sdk[fastapi]

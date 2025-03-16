@@ -1,0 +1,19 @@
+{
+  "health_score": 77.83909526865176,
+  "metrics": {
+    "duplication_rate": 0.13104013104013104,
+    "orphan_rate": 0.0,
+    "divergence_rate": 73.6949622631073
+  },
+  "issues": [
+    {
+      "type": "divergence",
+      "severity": "medium",
+      "description": "Code pattern divergence rate is 73.7%, above the threshold of 40.0%",
+      "recommendation": "Standardize implementation patterns across the codebase"
+    }
+  ],
+  "recommendations": [
+    "Code pattern divergence rate is 73.7%. Standardize implementation patterns across the codebase."
+  ]
+}

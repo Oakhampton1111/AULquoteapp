@@ -1,0 +1,2408 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d14" for="edge" attr.name="type" attr.type="string"/>
+<key id="d13" for="edge" attr.name="target" attr.type="string"/>
+<key id="d12" for="edge" attr.name="source" attr.type="string"/>
+<key id="d11" for="edge" attr.name="properties" attr.type="string"/>
+<key id="d10" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d9" for="edge" attr.name="edge_type" attr.type="string"/>
+<key id="d8" for="node" attr.name="content" attr.type="string"/>
+<key id="d7" for="node" attr.name="semantic_group" attr.type="string"/>
+<key id="d6" for="node" attr.name="domain_group" attr.type="string"/>
+<key id="d5" for="node" attr.name="interface_type" attr.type="string"/>
+<key id="d4" for="node" attr.name="docstring" attr.type="string"/>
+<key id="d3" for="node" attr.name="line_number" attr.type="long"/>
+<key id="d2" for="node" attr.name="file" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="LoginRequest">
+  <data key="d0">LoginRequest</data>
+  <data key="d1">interface</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\api\auth.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5">InterfaceType.DATA_MODEL</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="Token">
+  <data key="d0">Token</data>
+  <data key="d1">interface</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\api\auth.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5">InterfaceType.DATA_MODEL</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="PasswordResetRequest">
+  <data key="d0">PasswordResetRequest</data>
+  <data key="d1">interface</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\api\auth.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5">InterfaceType.DATA_MODEL</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="PasswordResetConfirm">
+  <data key="d0">PasswordResetConfirm</data>
+  <data key="d1">interface</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\api\auth.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5">InterfaceType.DATA_MODEL</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="authApi">
+  <data key="d0">authApi</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\api\auth.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="auth"/>
+<node id="./client"/>
+<node id="client"/>
+<node id="axios"/>
+<node id="User">
+  <data key="d0">User</data>
+  <data key="d1">interface</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\api\users.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5">InterfaceType.DATA_MODEL</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="Customer">
+  <data key="d0">Customer</data>
+  <data key="d1">interface</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\api\users.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5">InterfaceType.DATA_MODEL</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="UserCreate">
+  <data key="d0">UserCreate</data>
+  <data key="d1">interface</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\api\users.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5">InterfaceType.DATA_MODEL</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="UserUpdate">
+  <data key="d0">UserUpdate</data>
+  <data key="d1">interface</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\api\users.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5">InterfaceType.DATA_MODEL</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="CustomerCreate">
+  <data key="d0">CustomerCreate</data>
+  <data key="d1">interface</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\api\users.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5">InterfaceType.DATA_MODEL</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="CustomerUpdate">
+  <data key="d0">CustomerUpdate</data>
+  <data key="d1">interface</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\api\users.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5">InterfaceType.DATA_MODEL</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="usersApi">
+  <data key="d0">usersApi</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\api\users.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="users"/>
+<node id="WebSocketMessage">
+  <data key="d0">WebSocketMessage</data>
+  <data key="d1">interface</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\api\websocket.ts</data>
+  <data key="d3">1</data>
+  <data key="d4">WebSocket client for real-time communication.
+/
+
+export interface WebSocketMessage</data>
+  <data key="d5">InterfaceType.DATA_MODEL</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="WebSocketClient">
+  <data key="d0">WebSocketClient</data>
+  <data key="d1">class</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\api\websocket.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5">InterfaceType.SERVICE_INTERFACE</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="getWebSocketClient">
+  <data key="d0">getWebSocketClient</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\api\websocket.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="CustomerManager">
+  <data key="d0">CustomerManager</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\admin\CustomerManager.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="react"/>
+<node id="antd"/>
+<node id="../common/CRUDManager"/>
+<node id="./forms/CustomerForm"/>
+<node id="../../hooks/useCustomers"/>
+<node id="../../types/customer"/>
+<node id="QuoteGenerator">
+  <data key="d0">QuoteGenerator</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\admin\QuoteGenerator.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="@tanstack/react-query"/>
+<node id="../../services/api/quotes"/>
+<node id="QuoteManager">
+  <data key="d0">QuoteManager</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\admin\QuoteManager.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="@ant-design/icons"/>
+<node id="../forms/QuoteForm"/>
+<node id="../../hooks/useQuotes"/>
+<node id="../../types/quote"/>
+<node id="dayjs"/>
+<node id="RateCardManager">
+  <data key="d0">RateCardManager</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\admin\RateCardManager.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="./forms/RateCardForm"/>
+<node id="../../hooks/useRateCards"/>
+<node id="../../types/rateCard"/>
+<node id="AuthContext">
+  <data key="d0">AuthContext</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\auth\AuthProvider.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="AuthProvider">
+  <data key="d0">AuthProvider</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\auth\AuthContext.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="../../types/user"/>
+<node id="../../services/api/apiClient"/>
+<node id="LoginForm">
+  <data key="d0">LoginForm</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\auth\LoginForm.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="styled-components"/>
+<node id="../../hooks/useAuth"/>
+<node id="react-router-dom"/>
+<node id="ProtectedRoute">
+  <data key="d0">ProtectedRoute</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\auth\ProtectedRoute.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="ResetPassword">
+  <data key="d0">ResetPassword</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\auth\ResetPassword.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="ApiErrorMessage">
+  <data key="d0">ApiErrorMessage</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\common\ApiErrorMessage.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="CRUDManager">
+  <data key="d0">CRUDManager</data>
+  <data key="d1">function</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\common\CRUDManager.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5">InterfaceType.API_CONTRACT</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="ErrorBoundary">
+  <data key="d0">ErrorBoundary</data>
+  <data key="d1">class</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\common\ErrorBoundary.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5">InterfaceType.SERVICE_INTERFACE</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="LoadingSpinner">
+  <data key="d0">LoadingSpinner</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\common\LoadingSpinner.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="LoadingState">
+  <data key="d0">LoadingState</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\common\LoadingState.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="Logo">
+  <data key="d0">Logo</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\common\Logo.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="../../assets/images/aulogistics-logo.svg"/>
+<node id="QuoteForm">
+  <data key="d0">QuoteForm</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\client\QuoteForm\QuoteForm.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="AppLayout">
+  <data key="d0">AppLayout</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\layout\AppLayout.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="../navigation/MainNav"/>
+<node id="BaseLayout">
+  <data key="d0">BaseLayout</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\layout\BaseLayout.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="../common/ErrorBoundary"/>
+<node id="MainNav">
+  <data key="d0">MainNav</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\navigation\MainNav.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="CustomerForm">
+  <data key="d0">CustomerForm</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\admin\forms\CustomerForm.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="../../../types/customer"/>
+<node id="RateCardForm">
+  <data key="d0">RateCardForm</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\admin\forms\RateCardForm.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="../../../types/rateCard"/>
+<node id="UserManagement">
+  <data key="d0">UserManagement</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\admin\UserManagement\UserManagement.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="../../../services/api/users"/>
+<node id="../../../types/user"/>
+<node id="../../../services/api/quotes"/>
+<node id="../../../services/api/rateCards"/>
+<node id="QuoteList">
+  <data key="d0">QuoteList</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\client\QuoteList\QuoteList.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="../../../types/quote"/>
+<node id="CustomerList">
+  <data key="d0">CustomerList</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\crm\CustomerList\CustomerList.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="../../../services/api/crm"/>
+<node id="../../../styles/animations"/>
+<node id="CustomerProfile">
+  <data key="d0">CustomerProfile</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\crm\CustomerProfile\CustomerProfile.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="../../../styles/theme"/>
+<node id="../../../services/api/types"/>
+<node id="KanbanBoard">
+  <data key="d0">KanbanBoard</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\crm\KanbanBoard\KanbanBoard.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="react-beautiful-dnd"/>
+<node id="CRMDashboard">
+  <data key="d0">CRMDashboard</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\components\crm\Reports\CRMDashboard.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="fetchDashboardStats">
+  <data key="d0">fetchDashboardStats</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\admin.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="fetchRecentQuotes">
+  <data key="d0">fetchRecentQuotes</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\admin.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="approveQuote">
+  <data key="d0">approveQuote</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\admin.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="admin"/>
+<node id="ApiClientConfig">
+  <data key="d0">ApiClientConfig</data>
+  <data key="d1">interface</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\apiClient.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5">InterfaceType.DATA_MODEL</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="ApiResponse">
+  <data key="d0">ApiResponse</data>
+  <data key="d1">interface</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\apiClient.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5">InterfaceType.DATA_MODEL</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="ApiClient">
+  <data key="d0">ApiClient</data>
+  <data key="d1">class</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\apiClient.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5">InterfaceType.SERVICE_INTERFACE</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="createApiClient">
+  <data key="d0">createApiClient</data>
+  <data key="d1">function</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\apiClient.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5">InterfaceType.API_CONTRACT</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="apiClient"/>
+<node id="fetchClientDashboard">
+  <data key="d0">fetchClientDashboard</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\client.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="updateClientProfile">
+  <data key="d0">updateClientProfile</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\client.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="createConversation">
+  <data key="d0">createConversation</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\conversations.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="fetchConversations">
+  <data key="d0">fetchConversations</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\conversations.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="fetchQuoteConversations">
+  <data key="d0">fetchQuoteConversations</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\conversations.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="updateConversation">
+  <data key="d0">updateConversation</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\conversations.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="deleteConversation">
+  <data key="d0">deleteConversation</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\conversations.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="useQuoteConversations">
+  <data key="d0">useQuoteConversations</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\conversations.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="useCreateConversation">
+  <data key="d0">useCreateConversation</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\conversations.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="useUpdateConversation">
+  <data key="d0">useUpdateConversation</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\conversations.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="useDeleteConversation">
+  <data key="d0">useDeleteConversation</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\conversations.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="conversations"/>
+<node id="../../types/conversation"/>
+<node id="Interaction">
+  <data key="d0">Interaction</data>
+  <data key="d1">interface</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\crm.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5">InterfaceType.DATA_MODEL</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="Deal">
+  <data key="d0">Deal</data>
+  <data key="d1">interface</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\crm.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5">InterfaceType.DATA_MODEL</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="PipelineStats">
+  <data key="d0">PipelineStats</data>
+  <data key="d1">interface</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\crm.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5">InterfaceType.DATA_MODEL</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="CustomerCRMStats">
+  <data key="d0">CustomerCRMStats</data>
+  <data key="d1">interface</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\crm.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5">InterfaceType.DATA_MODEL</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="CustomerWithCRMStats">
+  <data key="d0">CustomerWithCRMStats</data>
+  <data key="d1">interface</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\crm.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5">InterfaceType.DATA_MODEL</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="crmApi">
+  <data key="d0">crmApi</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\crm.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="crm"/>
+<node id="./apiClient"/>
+<node id="./types"/>
+<node id="createCustomer">
+  <data key="d0">createCustomer</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\customers.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="fetchCustomers">
+  <data key="d0">fetchCustomers</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\customers.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="fetchCustomerById">
+  <data key="d0">fetchCustomerById</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\customers.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="updateCustomer">
+  <data key="d0">updateCustomer</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\customers.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="deleteCustomer">
+  <data key="d0">deleteCustomer</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\customers.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="useCustomers">
+  <data key="d0">useCustomers</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\customers.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="useCustomer">
+  <data key="d0">useCustomer</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\customers.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="useCreateCustomer">
+  <data key="d0">useCreateCustomer</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\customers.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="useUpdateCustomer">
+  <data key="d0">useUpdateCustomer</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\customers.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="useDeleteCustomer">
+  <data key="d0">useDeleteCustomer</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\customers.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="customers"/>
+<node id="QuoteGenerateRequest">
+  <data key="d0">QuoteGenerateRequest</data>
+  <data key="d1">interface</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\quotes.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5">InterfaceType.DATA_MODEL</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="createQuote">
+  <data key="d0">createQuote</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\quotes.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="fetchQuotes">
+  <data key="d0">fetchQuotes</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\quotes.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="fetchQuoteById">
+  <data key="d0">fetchQuoteById</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\quotes.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="updateQuoteStatus">
+  <data key="d0">updateQuoteStatus</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\quotes.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="deleteQuote">
+  <data key="d0">deleteQuote</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\quotes.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="generateQuote">
+  <data key="d0">generateQuote</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\quotes.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="quotes"/>
+<node id="fetchRateCards">
+  <data key="d0">fetchRateCards</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\rateCards.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="fetchRateCardById">
+  <data key="d0">fetchRateCardById</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\rateCards.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="createRateCard">
+  <data key="d0">createRateCard</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\rateCards.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="updateRateCard">
+  <data key="d0">updateRateCard</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\rateCards.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="deleteRateCard">
+  <data key="d0">deleteRateCard</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\rateCards.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="rateCards"/>
+<node id="ApiError">
+  <data key="d0">ApiError</data>
+  <data key="d1">interface</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\types.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5">InterfaceType.DATA_MODEL</data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="InteractionType">
+  <data key="d0">InteractionType</data>
+  <data key="d1">enum</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\types.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="DealStage">
+  <data key="d0">DealStage</data>
+  <data key="d1">enum</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\types.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="fetchUsers">
+  <data key="d0">fetchUsers</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\users.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="createUser">
+  <data key="d0">createUser</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\users.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="updateUser">
+  <data key="d0">updateUser</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\users.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="deleteUser">
+  <data key="d0">deleteUser</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\api\users.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="useAuth">
+  <data key="d0">useAuth</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\auth\AuthContext.tsx</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="./authService"/>
+<node id="login">
+  <data key="d0">login</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\auth\authService.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="logout">
+  <data key="d0">logout</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\auth\authService.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="getCurrentUser">
+  <data key="d0">getCurrentUser</data>
+  <data key="d1">const</data>
+  <data key="d2">C:\Users\Seth R\Desktop\AUL Quote App\frontend\src\services\auth\authService.ts</data>
+  <data key="d3">1</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6">QUOTE_MANAGEMENT</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+</node>
+<node id="authService"/>
+<edge source="LoginRequest" target="login">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.7233444452285767</data>
+  <data key="d11">{"similarity_score": 0.7233444452285767, "relationship_confidence": 0.7233444452285767}</data>
+</edge>
+<edge source="PasswordResetRequest" target="PasswordResetConfirm">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.7989168763160706</data>
+  <data key="d11">{"similarity_score": 0.7989168763160706, "relationship_confidence": 0.7989168763160706}</data>
+</edge>
+<edge source="auth" target="./client">
+  <data key="d12">auth</data>
+  <data key="d13">./client</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="client" target="axios">
+  <data key="d12">client</data>
+  <data key="d13">axios</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="Customer" target="CustomerCreate">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.7187855243682861</data>
+  <data key="d11">{"similarity_score": 0.7187855243682861, "relationship_confidence": 0.7187855243682861}</data>
+</edge>
+<edge source="UserUpdate" target="CustomerUpdate">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.7936674356460571</data>
+  <data key="d11">{"similarity_score": 0.7936674356460571, "relationship_confidence": 0.7936674356460571}</data>
+</edge>
+<edge source="UserUpdate" target="updateUser">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.7345707416534424</data>
+  <data key="d11">{"similarity_score": 0.7345707416534424, "relationship_confidence": 0.7345707416534424}</data>
+</edge>
+<edge source="CustomerCreate" target="CustomerManager">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.7059112787246704</data>
+  <data key="d11">{"similarity_score": 0.7059112787246704, "relationship_confidence": 0.7059112787246704}</data>
+</edge>
+<edge source="CustomerCreate" target="CustomerForm">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.7083534002304077</data>
+  <data key="d11">{"similarity_score": 0.7083534002304077, "relationship_confidence": 0.7083534002304077}</data>
+</edge>
+<edge source="users" target="./client">
+  <data key="d12">users</data>
+  <data key="d13">./client</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="users" target="axios">
+  <data key="d12">users</data>
+  <data key="d13">axios</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="users" target="../../types/user">
+  <data key="d12">users</data>
+  <data key="d13">../../types/user</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CustomerManager" target="react">
+  <data key="d12">CustomerManager</data>
+  <data key="d13">react</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CustomerManager" target="antd">
+  <data key="d12">CustomerManager</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CustomerManager" target="../common/CRUDManager">
+  <data key="d12">CustomerManager</data>
+  <data key="d13">../common/CRUDManager</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CustomerManager" target="./forms/CustomerForm">
+  <data key="d12">CustomerManager</data>
+  <data key="d13">./forms/CustomerForm</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CustomerManager" target="../../hooks/useCustomers">
+  <data key="d12">CustomerManager</data>
+  <data key="d13">../../hooks/useCustomers</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CustomerManager" target="../../types/customer">
+  <data key="d12">CustomerManager</data>
+  <data key="d13">../../types/customer</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteGenerator" target="antd">
+  <data key="d12">QuoteGenerator</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteGenerator" target="@tanstack/react-query">
+  <data key="d12">QuoteGenerator</data>
+  <data key="d13">@tanstack/react-query</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteGenerator" target="../../services/api/quotes">
+  <data key="d12">QuoteGenerator</data>
+  <data key="d13">../../services/api/quotes</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteGenerator" target="../../hooks/useCustomers">
+  <data key="d12">QuoteGenerator</data>
+  <data key="d13">../../hooks/useCustomers</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteManager" target="antd">
+  <data key="d12">QuoteManager</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteManager" target="@ant-design/icons">
+  <data key="d12">QuoteManager</data>
+  <data key="d13">@ant-design/icons</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteManager" target="../common/CRUDManager">
+  <data key="d12">QuoteManager</data>
+  <data key="d13">../common/CRUDManager</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteManager" target="../forms/QuoteForm">
+  <data key="d12">QuoteManager</data>
+  <data key="d13">../forms/QuoteForm</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteManager" target="../../hooks/useQuotes">
+  <data key="d12">QuoteManager</data>
+  <data key="d13">../../hooks/useQuotes</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteManager" target="../../types/quote">
+  <data key="d12">QuoteManager</data>
+  <data key="d13">../../types/quote</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteManager" target="dayjs">
+  <data key="d12">QuoteManager</data>
+  <data key="d13">dayjs</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteManager" target="QuoteList">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.716498613357544</data>
+  <data key="d11">{"similarity_score": 0.716498613357544, "relationship_confidence": 0.716498613357544}</data>
+</edge>
+<edge source="RateCardManager" target="react">
+  <data key="d12">RateCardManager</data>
+  <data key="d13">react</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="RateCardManager" target="antd">
+  <data key="d12">RateCardManager</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="RateCardManager" target="../common/CRUDManager">
+  <data key="d12">RateCardManager</data>
+  <data key="d13">../common/CRUDManager</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="RateCardManager" target="./forms/RateCardForm">
+  <data key="d12">RateCardManager</data>
+  <data key="d13">./forms/RateCardForm</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="RateCardManager" target="../../hooks/useRateCards">
+  <data key="d12">RateCardManager</data>
+  <data key="d13">../../hooks/useRateCards</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="RateCardManager" target="../../types/rateCard">
+  <data key="d12">RateCardManager</data>
+  <data key="d13">../../types/rateCard</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="RateCardManager" target="dayjs">
+  <data key="d12">RateCardManager</data>
+  <data key="d13">dayjs</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="RateCardManager" target="RateCardForm">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.7946293950080872</data>
+  <data key="d11">{"similarity_score": 0.7946293950080872, "relationship_confidence": 0.7946293950080872}</data>
+</edge>
+<edge source="AuthContext" target="../../types/user">
+  <data key="d12">AuthContext</data>
+  <data key="d13">../../types/user</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="AuthContext" target="./authService">
+  <data key="d12">AuthContext</data>
+  <data key="d13">./authService</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="AuthProvider" target="antd">
+  <data key="d12">AuthProvider</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="AuthProvider" target="../../types/user">
+  <data key="d12">AuthProvider</data>
+  <data key="d13">../../types/user</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="AuthProvider" target="../../services/api/apiClient">
+  <data key="d12">AuthProvider</data>
+  <data key="d13">../../services/api/apiClient</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="LoginForm" target="antd">
+  <data key="d12">LoginForm</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="LoginForm" target="@ant-design/icons">
+  <data key="d12">LoginForm</data>
+  <data key="d13">@ant-design/icons</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="LoginForm" target="styled-components">
+  <data key="d12">LoginForm</data>
+  <data key="d13">styled-components</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="LoginForm" target="../../hooks/useAuth">
+  <data key="d12">LoginForm</data>
+  <data key="d13">../../hooks/useAuth</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="LoginForm" target="react-router-dom">
+  <data key="d12">LoginForm</data>
+  <data key="d13">react-router-dom</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="LoginForm" target="login">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.7261819839477539</data>
+  <data key="d11">{"similarity_score": 0.7261819839477539, "relationship_confidence": 0.7261819839477539}</data>
+</edge>
+<edge source="ProtectedRoute" target="react">
+  <data key="d12">ProtectedRoute</data>
+  <data key="d13">react</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="ProtectedRoute" target="react-router-dom">
+  <data key="d12">ProtectedRoute</data>
+  <data key="d13">react-router-dom</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="ProtectedRoute" target="antd">
+  <data key="d12">ProtectedRoute</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="ProtectedRoute" target="../../hooks/useAuth">
+  <data key="d12">ProtectedRoute</data>
+  <data key="d13">../../hooks/useAuth</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="ResetPassword" target="react">
+  <data key="d12">ResetPassword</data>
+  <data key="d13">react</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="ResetPassword" target="antd">
+  <data key="d12">ResetPassword</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="ResetPassword" target="@ant-design/icons">
+  <data key="d12">ResetPassword</data>
+  <data key="d13">@ant-design/icons</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="ResetPassword" target="styled-components">
+  <data key="d12">ResetPassword</data>
+  <data key="d13">styled-components</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="ResetPassword" target="../../hooks/useAuth">
+  <data key="d12">ResetPassword</data>
+  <data key="d13">../../hooks/useAuth</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="ResetPassword" target="react-router-dom">
+  <data key="d12">ResetPassword</data>
+  <data key="d13">react-router-dom</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="ApiErrorMessage" target="react">
+  <data key="d12">ApiErrorMessage</data>
+  <data key="d13">react</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="ApiErrorMessage" target="antd">
+  <data key="d12">ApiErrorMessage</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="ApiErrorMessage" target="axios">
+  <data key="d12">ApiErrorMessage</data>
+  <data key="d13">axios</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CRUDManager" target="antd">
+  <data key="d12">CRUDManager</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CRUDManager" target="@ant-design/icons">
+  <data key="d12">CRUDManager</data>
+  <data key="d13">@ant-design/icons</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CRUDManager" target="@tanstack/react-query">
+  <data key="d12">CRUDManager</data>
+  <data key="d13">@tanstack/react-query</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="ErrorBoundary" target="antd">
+  <data key="d12">ErrorBoundary</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="ErrorBoundary" target="styled-components">
+  <data key="d12">ErrorBoundary</data>
+  <data key="d13">styled-components</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="LoadingSpinner" target="react">
+  <data key="d12">LoadingSpinner</data>
+  <data key="d13">react</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="LoadingSpinner" target="antd">
+  <data key="d12">LoadingSpinner</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="LoadingSpinner" target="styled-components">
+  <data key="d12">LoadingSpinner</data>
+  <data key="d13">styled-components</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="LoadingState" target="react">
+  <data key="d12">LoadingState</data>
+  <data key="d13">react</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="LoadingState" target="antd">
+  <data key="d12">LoadingState</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="LoadingState" target="@ant-design/icons">
+  <data key="d12">LoadingState</data>
+  <data key="d13">@ant-design/icons</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="LoadingState" target="styled-components">
+  <data key="d12">LoadingState</data>
+  <data key="d13">styled-components</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="Logo" target="react">
+  <data key="d12">Logo</data>
+  <data key="d13">react</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="Logo" target="styled-components">
+  <data key="d12">Logo</data>
+  <data key="d13">styled-components</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="Logo" target="../../assets/images/aulogistics-logo.svg">
+  <data key="d12">Logo</data>
+  <data key="d13">../../assets/images/aulogistics-logo.svg</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteForm" target="react">
+  <data key="d12">QuoteForm</data>
+  <data key="d13">react</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteForm" target="antd">
+  <data key="d12">QuoteForm</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteForm" target="@ant-design/icons">
+  <data key="d12">QuoteForm</data>
+  <data key="d13">@ant-design/icons</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteForm" target="styled-components">
+  <data key="d12">QuoteForm</data>
+  <data key="d13">styled-components</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteForm" target="../../types/quote">
+  <data key="d12">QuoteForm</data>
+  <data key="d13">../../types/quote</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteForm" target="../../hooks/useRateCards">
+  <data key="d12">QuoteForm</data>
+  <data key="d13">../../hooks/useRateCards</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteForm" target="../../hooks/useCustomers">
+  <data key="d12">QuoteForm</data>
+  <data key="d13">../../hooks/useCustomers</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteForm" target="@tanstack/react-query">
+  <data key="d12">QuoteForm</data>
+  <data key="d13">@tanstack/react-query</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteForm" target="../../../services/api/quotes">
+  <data key="d12">QuoteForm</data>
+  <data key="d13">../../../services/api/quotes</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteForm" target="../../../services/api/rateCards">
+  <data key="d12">QuoteForm</data>
+  <data key="d13">../../../services/api/rateCards</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="AppLayout" target="react">
+  <data key="d12">AppLayout</data>
+  <data key="d13">react</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="AppLayout" target="antd">
+  <data key="d12">AppLayout</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="AppLayout" target="styled-components">
+  <data key="d12">AppLayout</data>
+  <data key="d13">styled-components</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="AppLayout" target="../navigation/MainNav">
+  <data key="d12">AppLayout</data>
+  <data key="d13">../navigation/MainNav</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="AppLayout" target="react-router-dom">
+  <data key="d12">AppLayout</data>
+  <data key="d13">react-router-dom</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="BaseLayout" target="react">
+  <data key="d12">BaseLayout</data>
+  <data key="d13">react</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="BaseLayout" target="antd">
+  <data key="d12">BaseLayout</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="BaseLayout" target="styled-components">
+  <data key="d12">BaseLayout</data>
+  <data key="d13">styled-components</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="BaseLayout" target="../common/ErrorBoundary">
+  <data key="d12">BaseLayout</data>
+  <data key="d13">../common/ErrorBoundary</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="BaseLayout" target="../navigation/MainNav">
+  <data key="d12">BaseLayout</data>
+  <data key="d13">../navigation/MainNav</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="BaseLayout" target="../../hooks/useAuth">
+  <data key="d12">BaseLayout</data>
+  <data key="d13">../../hooks/useAuth</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="MainNav" target="react">
+  <data key="d12">MainNav</data>
+  <data key="d13">react</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="MainNav" target="antd">
+  <data key="d12">MainNav</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="MainNav" target="@ant-design/icons">
+  <data key="d12">MainNav</data>
+  <data key="d13">@ant-design/icons</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="MainNav" target="react-router-dom">
+  <data key="d12">MainNav</data>
+  <data key="d13">react-router-dom</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="MainNav" target="styled-components">
+  <data key="d12">MainNav</data>
+  <data key="d13">styled-components</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="MainNav" target="../../hooks/useAuth">
+  <data key="d12">MainNav</data>
+  <data key="d13">../../hooks/useAuth</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="MainNav" target="../../types/user">
+  <data key="d12">MainNav</data>
+  <data key="d13">../../types/user</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CustomerForm" target="react">
+  <data key="d12">CustomerForm</data>
+  <data key="d13">react</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CustomerForm" target="antd">
+  <data key="d12">CustomerForm</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CustomerForm" target="../../../types/customer">
+  <data key="d12">CustomerForm</data>
+  <data key="d13">../../../types/customer</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="RateCardForm" target="react">
+  <data key="d12">RateCardForm</data>
+  <data key="d13">react</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="RateCardForm" target="antd">
+  <data key="d12">RateCardForm</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="RateCardForm" target="../../../types/rateCard">
+  <data key="d12">RateCardForm</data>
+  <data key="d13">../../../types/rateCard</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="RateCardForm" target="dayjs">
+  <data key="d12">RateCardForm</data>
+  <data key="d13">dayjs</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="UserManagement" target="antd">
+  <data key="d12">UserManagement</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="UserManagement" target="@tanstack/react-query">
+  <data key="d12">UserManagement</data>
+  <data key="d13">@tanstack/react-query</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="UserManagement" target="../../../services/api/users">
+  <data key="d12">UserManagement</data>
+  <data key="d13">../../../services/api/users</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="UserManagement" target="../../../types/user">
+  <data key="d12">UserManagement</data>
+  <data key="d13">../../../types/user</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteList" target="react">
+  <data key="d12">QuoteList</data>
+  <data key="d13">react</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteList" target="antd">
+  <data key="d12">QuoteList</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteList" target="@tanstack/react-query">
+  <data key="d12">QuoteList</data>
+  <data key="d13">@tanstack/react-query</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteList" target="../../../services/api/quotes">
+  <data key="d12">QuoteList</data>
+  <data key="d13">../../../services/api/quotes</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteList" target="../../../types/quote">
+  <data key="d12">QuoteList</data>
+  <data key="d13">../../../types/quote</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="QuoteList" target="react-router-dom">
+  <data key="d12">QuoteList</data>
+  <data key="d13">react-router-dom</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CustomerList" target="antd">
+  <data key="d12">CustomerList</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CustomerList" target="@ant-design/icons">
+  <data key="d12">CustomerList</data>
+  <data key="d13">@ant-design/icons</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CustomerList" target="react-router-dom">
+  <data key="d12">CustomerList</data>
+  <data key="d13">react-router-dom</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CustomerList" target="styled-components">
+  <data key="d12">CustomerList</data>
+  <data key="d13">styled-components</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CustomerList" target="../../../services/api/crm">
+  <data key="d12">CustomerList</data>
+  <data key="d13">../../../services/api/crm</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CustomerList" target="../../../styles/animations">
+  <data key="d12">CustomerList</data>
+  <data key="d13">../../../styles/animations</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CustomerProfile" target="antd">
+  <data key="d12">CustomerProfile</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CustomerProfile" target="styled-components">
+  <data key="d12">CustomerProfile</data>
+  <data key="d13">styled-components</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CustomerProfile" target="../../../styles/theme">
+  <data key="d12">CustomerProfile</data>
+  <data key="d13">../../../styles/theme</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CustomerProfile" target="../../../styles/animations">
+  <data key="d12">CustomerProfile</data>
+  <data key="d13">../../../styles/animations</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CustomerProfile" target="../../../services/api/crm">
+  <data key="d12">CustomerProfile</data>
+  <data key="d13">../../../services/api/crm</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CustomerProfile" target="../../../services/api/types">
+  <data key="d12">CustomerProfile</data>
+  <data key="d13">../../../services/api/types</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="KanbanBoard" target="react-beautiful-dnd">
+  <data key="d12">KanbanBoard</data>
+  <data key="d13">react-beautiful-dnd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="KanbanBoard" target="antd">
+  <data key="d12">KanbanBoard</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="KanbanBoard" target="styled-components">
+  <data key="d12">KanbanBoard</data>
+  <data key="d13">styled-components</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="KanbanBoard" target="../../../styles/theme">
+  <data key="d12">KanbanBoard</data>
+  <data key="d13">../../../styles/theme</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="KanbanBoard" target="../../../styles/animations">
+  <data key="d12">KanbanBoard</data>
+  <data key="d13">../../../styles/animations</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="KanbanBoard" target="../../../services/api/crm">
+  <data key="d12">KanbanBoard</data>
+  <data key="d13">../../../services/api/crm</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="KanbanBoard" target="../../../services/api/types">
+  <data key="d12">KanbanBoard</data>
+  <data key="d13">../../../services/api/types</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CRMDashboard" target="antd">
+  <data key="d12">CRMDashboard</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CRMDashboard" target="styled-components">
+  <data key="d12">CRMDashboard</data>
+  <data key="d13">styled-components</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CRMDashboard" target="../../../styles/theme">
+  <data key="d12">CRMDashboard</data>
+  <data key="d13">../../../styles/theme</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CRMDashboard" target="../../../styles/animations">
+  <data key="d12">CRMDashboard</data>
+  <data key="d13">../../../styles/animations</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CRMDashboard" target="../../../services/api/crm">
+  <data key="d12">CRMDashboard</data>
+  <data key="d13">../../../services/api/crm</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="CRMDashboard" target="../../../services/api/types">
+  <data key="d12">CRMDashboard</data>
+  <data key="d13">../../../services/api/types</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="fetchRecentQuotes" target="fetchQuoteConversations">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.7916696667671204</data>
+  <data key="d11">{"similarity_score": 0.7916696667671204, "relationship_confidence": 0.7916696667671204}</data>
+</edge>
+<edge source="fetchRecentQuotes" target="fetchQuotes">
+  <data key="d9">moderately_related</data>
+  <data key="d10">0.8416285514831543</data>
+  <data key="d11">{"similarity_score": 0.8416285514831543, "relationship_confidence": 0.8416285514831543}</data>
+</edge>
+<edge source="fetchRecentQuotes" target="fetchQuoteById">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.7501501441001892</data>
+  <data key="d11">{"similarity_score": 0.7501501441001892, "relationship_confidence": 0.7501501441001892}</data>
+</edge>
+<edge source="admin" target="axios">
+  <data key="d12">admin</data>
+  <data key="d13">axios</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="ApiClientConfig" target="ApiClient">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.7883661985397339</data>
+  <data key="d11">{"similarity_score": 0.7883661985397339, "relationship_confidence": 0.7883661985397339}</data>
+</edge>
+<edge source="apiClient" target="antd">
+  <data key="d12">apiClient</data>
+  <data key="d13">antd</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="fetchQuoteConversations" target="useQuoteConversations">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.7649548053741455</data>
+  <data key="d11">{"similarity_score": 0.7649548053741455, "relationship_confidence": 0.7649548053741455}</data>
+</edge>
+<edge source="fetchQuoteConversations" target="fetchQuotes">
+  <data key="d9">highly_related</data>
+  <data key="d10">0.9179654717445374</data>
+  <data key="d11">{"similarity_score": 0.9179654717445374, "relationship_confidence": 0.9179654717445374}</data>
+</edge>
+<edge source="fetchQuoteConversations" target="fetchQuoteById">
+  <data key="d9">moderately_related</data>
+  <data key="d10">0.8336009979248047</data>
+  <data key="d11">{"similarity_score": 0.8336009979248047, "relationship_confidence": 0.8336009979248047}</data>
+</edge>
+<edge source="updateConversation" target="useUpdateConversation">
+  <data key="d9">moderately_related</data>
+  <data key="d10">0.8087908029556274</data>
+  <data key="d11">{"similarity_score": 0.8087908029556274, "relationship_confidence": 0.8087908029556274}</data>
+</edge>
+<edge source="useQuoteConversations" target="createQuote">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.7504189014434814</data>
+  <data key="d11">{"similarity_score": 0.7504189014434814, "relationship_confidence": 0.7504189014434814}</data>
+</edge>
+<edge source="useQuoteConversations" target="generateQuote">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.7325413823127747</data>
+  <data key="d11">{"similarity_score": 0.7325413823127747, "relationship_confidence": 0.7325413823127747}</data>
+</edge>
+<edge source="useUpdateConversation" target="useUpdateCustomer">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.7783117890357971</data>
+  <data key="d11">{"similarity_score": 0.7783117890357971, "relationship_confidence": 0.7783117890357971}</data>
+</edge>
+<edge source="useDeleteConversation" target="useDeleteCustomer">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.7016226649284363</data>
+  <data key="d11">{"similarity_score": 0.7016226649284363, "relationship_confidence": 0.7016226649284363}</data>
+</edge>
+<edge source="conversations" target="./client">
+  <data key="d12">conversations</data>
+  <data key="d13">./client</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="conversations" target="../../types/conversation">
+  <data key="d12">conversations</data>
+  <data key="d13">../../types/conversation</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="conversations" target="@tanstack/react-query">
+  <data key="d12">conversations</data>
+  <data key="d13">@tanstack/react-query</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="Interaction" target="InteractionType">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.7534051537513733</data>
+  <data key="d11">{"similarity_score": 0.7534051537513733, "relationship_confidence": 0.7534051537513733}</data>
+</edge>
+<edge source="CustomerCRMStats" target="CustomerWithCRMStats">
+  <data key="d9">highly_related</data>
+  <data key="d10">0.9351186752319336</data>
+  <data key="d11">{"similarity_score": 0.9351186752319336, "relationship_confidence": 0.9351186752319336}</data>
+</edge>
+<edge source="crm" target="./apiClient">
+  <data key="d12">crm</data>
+  <data key="d13">./apiClient</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="crm" target="./types">
+  <data key="d12">crm</data>
+  <data key="d13">./types</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="fetchCustomers" target="fetchCustomerById">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.7029366493225098</data>
+  <data key="d11">{"similarity_score": 0.7029366493225098, "relationship_confidence": 0.7029366493225098}</data>
+</edge>
+<edge source="updateCustomer" target="useUpdateCustomer">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.7683142423629761</data>
+  <data key="d11">{"similarity_score": 0.7683142423629761, "relationship_confidence": 0.7683142423629761}</data>
+</edge>
+<edge source="useCustomers" target="useCustomer">
+  <data key="d9">highly_related</data>
+  <data key="d10">0.9080374240875244</data>
+  <data key="d11">{"similarity_score": 0.9080374240875244, "relationship_confidence": 0.9080374240875244}</data>
+</edge>
+<edge source="useCustomer" target="useCreateCustomer">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.7464004755020142</data>
+  <data key="d11">{"similarity_score": 0.7464004755020142, "relationship_confidence": 0.7464004755020142}</data>
+</edge>
+<edge source="customers" target="./client">
+  <data key="d12">customers</data>
+  <data key="d13">./client</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="customers" target="../../types/customer">
+  <data key="d12">customers</data>
+  <data key="d13">../../types/customer</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="customers" target="@tanstack/react-query">
+  <data key="d12">customers</data>
+  <data key="d13">@tanstack/react-query</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="createQuote" target="fetchQuotes">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.705498218536377</data>
+  <data key="d11">{"similarity_score": 0.705498218536377, "relationship_confidence": 0.705498218536377}</data>
+</edge>
+<edge source="createQuote" target="deleteQuote">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.7226953506469727</data>
+  <data key="d11">{"similarity_score": 0.7226953506469727, "relationship_confidence": 0.7226953506469727}</data>
+</edge>
+<edge source="createQuote" target="generateQuote">
+  <data key="d9">highly_related</data>
+  <data key="d10">0.9095731377601624</data>
+  <data key="d11">{"similarity_score": 0.9095731377601624, "relationship_confidence": 0.9095731377601624}</data>
+</edge>
+<edge source="fetchQuotes" target="fetchQuoteById">
+  <data key="d9">moderately_related</data>
+  <data key="d10">0.8736487627029419</data>
+  <data key="d11">{"similarity_score": 0.8736487627029419, "relationship_confidence": 0.8736487627029419}</data>
+</edge>
+<edge source="fetchQuotes" target="generateQuote">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.7119348049163818</data>
+  <data key="d11">{"similarity_score": 0.7119348049163818, "relationship_confidence": 0.7119348049163818}</data>
+</edge>
+<edge source="quotes" target="./client">
+  <data key="d12">quotes</data>
+  <data key="d13">./client</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="quotes" target="../../types/quote">
+  <data key="d12">quotes</data>
+  <data key="d13">../../types/quote</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="fetchRateCards" target="fetchRateCardById">
+  <data key="d9">moderately_related</data>
+  <data key="d10">0.8362388014793396</data>
+  <data key="d11">{"similarity_score": 0.8362388014793396, "relationship_confidence": 0.8362388014793396}</data>
+</edge>
+<edge source="createRateCard" target="updateRateCard">
+  <data key="d9">weakly_related</data>
+  <data key="d10">0.7395753860473633</data>
+  <data key="d11">{"similarity_score": 0.7395753860473633, "relationship_confidence": 0.7395753860473633}</data>
+</edge>
+<edge source="rateCards" target="axios">
+  <data key="d12">rateCards</data>
+  <data key="d13">axios</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="rateCards" target="../../types/rateCard">
+  <data key="d12">rateCards</data>
+  <data key="d13">../../types/rateCard</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="authService" target="axios">
+  <data key="d12">authService</data>
+  <data key="d13">axios</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+<edge source="authService" target="../../types/user">
+  <data key="d12">authService</data>
+  <data key="d13">../../types/user</data>
+  <data key="d14">imports</data>
+  <data key="d10">1.0</data>
+  <data key="d11"></data>
+</edge>
+</graph></graphml>

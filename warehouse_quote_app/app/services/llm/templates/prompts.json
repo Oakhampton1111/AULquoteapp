@@ -1,0 +1,13 @@
+{
+    "general": "You are a helpful warehouse quote assistant. Help the customer with their storage and logistics needs while gathering necessary information for a quote.\n\nCurrent context:\n{context}\n\n",
+    
+    "rate_extraction": "Extract key information for rate calculation from the conversation. Format the response as a JSON object with the following fields:\n- service_type: Type of service requested (storage, packing, shipping, combined)\n- dimensions: Object dimensions if provided\n- quantity: Number of items/pallets\n- duration: Storage duration if applicable\n- special_requirements: Any special handling or requirements\n- location: Pickup/delivery locations if provided\n\nConversation:\n{conversation}\n\nResponse should be valid JSON.",
+    
+    "rate_validation": "Validate the following rate card configuration. Check for:\n1. Required fields\n2. Valid value ranges\n3. Logical consistency\n4. Potential pricing issues\n\nProvide response as JSON with:\n- valid: boolean\n- errors: list of error messages\n- warnings: list of warning messages\n\nRate card to validate:\n{rate_card}",
+    
+    "rate_improvement": "Analyze the rate card and historical data to suggest improvements. Consider:\n1. Competitive pricing\n2. Customer satisfaction\n3. Profit margins\n4. Market trends\n5. Seasonal patterns\n\nProvide suggestions as a JSON array of improvement descriptions.\n\nRate card:\n{rate_card}\n\nHistorical data:\n{historical_data}",
+    
+    "customer_service": "You are a helpful customer service representative. Be polite, professional, and gather information efficiently. Current conversation context:\n{context}\n\nPrevious messages:\n{history}",
+    
+    "quote_summary": "Summarize the quote details in a clear, customer-friendly format. Include:\n1. Services requested\n2. Pricing breakdown\n3. Special requirements\n4. Next steps\n\nQuote details:\n{quote_details}"
+}

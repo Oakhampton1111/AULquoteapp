@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 150">
+  <g>
+    <!-- Ship icon -->
+    <path fill="#006699" d="M80 20c-5 0-40 15-45 20s-15 25-15 30 5 20 10 25 35 15 40 15 40-15 45-20 15-25 15-30-5-20-10-25-35-15-40-15z"/>
+    <!-- Text -->
+    <text x="150" y="80" font-family="Arial, sans-serif" font-size="60" font-weight="bold">
+      <tspan fill="#006699">AU</tspan><tspan fill="#000">Logistics</tspan><tspan fill="#006699">.au</tspan>
+    </text>
+    <!-- Subtitle -->
+    <text x="150" y="110" font-family="Arial, sans-serif" font-size="20" fill="#006699">
+      Warehousing | 3PL | Hardstand | Transport
+    </text>
+  </g>
+</svg>

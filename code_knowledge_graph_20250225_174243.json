@@ -1,0 +1,129 @@
+{
+  "nodes": [
+    {
+      "id": "CRUDManager.test"
+    },
+    {
+      "id": "react"
+    },
+    {
+      "id": "@testing-library/react"
+    },
+    {
+      "id": "../CRUDManager"
+    },
+    {
+      "id": "@tanstack/react-query"
+    },
+    {
+      "id": "useQueryFactory.test"
+    },
+    {
+      "id": "@testing-library/react-hooks"
+    },
+    {
+      "id": "../useQueryFactory"
+    },
+    {
+      "id": "antd"
+    },
+    {
+      "id": "../../services/api/apiClient"
+    },
+    {
+      "id": "apiClient.test"
+    },
+    {
+      "id": "../apiClient"
+    },
+    {
+      "id": "axios"
+    }
+  ],
+  "edges": [
+    {
+      "source": "CRUDManager.test",
+      "target": "react",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CRUDManager.test",
+      "target": "@testing-library/react",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CRUDManager.test",
+      "target": "../CRUDManager",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CRUDManager.test",
+      "target": "@tanstack/react-query",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "useQueryFactory.test",
+      "target": "@testing-library/react-hooks",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "useQueryFactory.test",
+      "target": "@tanstack/react-query",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "useQueryFactory.test",
+      "target": "../useQueryFactory",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "useQueryFactory.test",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "useQueryFactory.test",
+      "target": "../../services/api/apiClient",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "apiClient.test",
+      "target": "../apiClient",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "apiClient.test",
+      "target": "axios",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "apiClient.test",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    }
+  ]
+}

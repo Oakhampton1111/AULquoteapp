@@ -1,0 +1,40 @@
+{
+    "documents": [
+        {
+            "id": "rate_storage_1",
+            "category": "rate_cards",
+            "content": "Storage rate calculations consider:\n- Space requirements (square meters/feet)\n- Duration (daily, weekly, monthly rates)\n- Storage type (standard, climate-controlled, specialized)\n- Location within facility\n- Access requirements\n- Insurance requirements",
+            "updated_at": "2025-02-11T14:45:00Z"
+        },
+        {
+            "id": "rate_packing_1",
+            "category": "rate_cards",
+            "content": "Packing service rates include:\n- Material costs (boxes, padding, tape)\n- Labor costs (per hour)\n- Special handling requirements\n- Fragile item handling\n- Equipment usage\n- Volume discounts for bulk packing",
+            "updated_at": "2025-02-11T14:45:00Z"
+        },
+        {
+            "id": "rate_shipping_1",
+            "category": "rate_cards",
+            "content": "Shipping rates factor in:\n- Distance (zones)\n- Weight brackets\n- Dimensional weight\n- Service speed (standard, express)\n- Special handling\n- Insurance coverage\n- Fuel surcharges",
+            "updated_at": "2025-02-11T14:45:00Z"
+        },
+        {
+            "id": "requirements_storage_1",
+            "category": "requirements",
+            "content": "Storage requirements checklist:\n1. Item dimensions and weight\n2. Storage duration\n3. Climate control needs\n4. Access frequency\n5. Insurance requirements\n6. Hazardous materials declaration\n7. Special handling instructions",
+            "updated_at": "2025-02-11T14:45:00Z"
+        },
+        {
+            "id": "customer_service_1",
+            "category": "guidelines",
+            "content": "Customer service guidelines:\n1. Greet professionally\n2. Listen actively to requirements\n3. Ask clarifying questions\n4. Explain services clearly\n5. Address concerns promptly\n6. Provide clear pricing information\n7. Follow up on quotes\n8. Document special requests",
+            "updated_at": "2025-02-11T14:45:00Z"
+        },
+        {
+            "id": "rate_validation_1",
+            "category": "validation",
+            "content": "Rate card validation rules:\n1. Base rates must be > $0\n2. Volume discounts must be 0-50%\n3. Minimum charges required\n4. Duration rates must be properly tiered\n5. Special handling fees must be justified\n6. Seasonal adjustments must be documented",
+            "updated_at": "2025-02-11T14:45:00Z"
+        }
+    ]
+}

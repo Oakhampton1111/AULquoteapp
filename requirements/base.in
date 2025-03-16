@@ -1,0 +1,58 @@
+# Core dependencies
+fastapi
+uvicorn
+sqlalchemy
+alembic
+pydantic
+pydantic-settings
+python-jose
+passlib
+bcrypt
+python-multipart
+email-validator
+httpx
+python-dotenv
+psycopg2-binary
+annotated-types
+
+# API and Security
+fastapi-utils
+dependency-injector
+
+# Monitoring and Logging
+sentry-sdk
+prometheus-client
+prometheus-fastapi-instrumentator
+structlog
+psutil
+
+# Task Processing
+redis
+celery
+flower
+
+# Data Processing
+pandas
+numpy
+openpyxl
+xlrd
+
+# Email
+fastapi-mail
+sendgrid
+
+# File Handling
+aiofiles
+
+# Date and Time
+python-dateutil
+pytz
+
+# Production Server
+gunicorn
+
+# Rate limiting and caching
+fastapi-limiter
+fastapi-cache2
+redis
+aioredis

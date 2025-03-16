@@ -1,0 +1,30 @@
+# Include base requirements
+-r base.in
+
+# Testing dependencies
+pytest
+pytest-asyncio
+pytest-playwright
+playwright
+pytest-cov
+pytest-xdist
+pytest-env
+requests
+pytest-docker
+aiosqlite
+asyncpg
+
+# Development and Type Checking
+mypy
+pylint
+types-python-jose
+types-passlib
+types-aiofiles
+typing-extensions
+
+# Development Tools
+pip-tools
+black
+isort
+flake8
+pre-commit

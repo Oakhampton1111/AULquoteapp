@@ -1,0 +1,2995 @@
+{
+  "nodes": [
+    {
+      "id": "LoginRequest",
+      "name": "LoginRequest",
+      "type": "interface",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\api\\auth.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": "DATA_MODEL",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "Token",
+      "name": "Token",
+      "type": "interface",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\api\\auth.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": "DATA_MODEL",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "PasswordResetRequest",
+      "name": "PasswordResetRequest",
+      "type": "interface",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\api\\auth.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": "DATA_MODEL",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "PasswordResetConfirm",
+      "name": "PasswordResetConfirm",
+      "type": "interface",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\api\\auth.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": "DATA_MODEL",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "authApi",
+      "name": "authApi",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\api\\auth.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "auth"
+    },
+    {
+      "id": "./client"
+    },
+    {
+      "id": "client"
+    },
+    {
+      "id": "axios"
+    },
+    {
+      "id": "User",
+      "name": "User",
+      "type": "interface",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\api\\users.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": "DATA_MODEL",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "Customer",
+      "name": "Customer",
+      "type": "interface",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\api\\users.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": "DATA_MODEL",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "UserCreate",
+      "name": "UserCreate",
+      "type": "interface",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\api\\users.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": "DATA_MODEL",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "UserUpdate",
+      "name": "UserUpdate",
+      "type": "interface",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\api\\users.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": "DATA_MODEL",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "CustomerCreate",
+      "name": "CustomerCreate",
+      "type": "interface",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\api\\users.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": "DATA_MODEL",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "CustomerUpdate",
+      "name": "CustomerUpdate",
+      "type": "interface",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\api\\users.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": "DATA_MODEL",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "usersApi",
+      "name": "usersApi",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\api\\users.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "users"
+    },
+    {
+      "id": "WebSocketMessage",
+      "name": "WebSocketMessage",
+      "type": "interface",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\api\\websocket.ts",
+      "line_number": 1,
+      "docstring": "WebSocket client for real-time communication.\n/\n\nexport interface WebSocketMessage",
+      "interface_type": "DATA_MODEL",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "WebSocketClient",
+      "name": "WebSocketClient",
+      "type": "class",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\api\\websocket.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": "SERVICE_INTERFACE",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "getWebSocketClient",
+      "name": "getWebSocketClient",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\api\\websocket.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "CustomerManager",
+      "name": "CustomerManager",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\admin\\CustomerManager.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "react"
+    },
+    {
+      "id": "antd"
+    },
+    {
+      "id": "../common/CRUDManager"
+    },
+    {
+      "id": "./forms/CustomerForm"
+    },
+    {
+      "id": "../../hooks/useCustomers"
+    },
+    {
+      "id": "../../types/customer"
+    },
+    {
+      "id": "QuoteGenerator",
+      "name": "QuoteGenerator",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\admin\\QuoteGenerator.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "@tanstack/react-query"
+    },
+    {
+      "id": "../../services/api/quotes"
+    },
+    {
+      "id": "QuoteManager",
+      "name": "QuoteManager",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\admin\\QuoteManager.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "@ant-design/icons"
+    },
+    {
+      "id": "../forms/QuoteForm"
+    },
+    {
+      "id": "../../hooks/useQuotes"
+    },
+    {
+      "id": "../../types/quote"
+    },
+    {
+      "id": "dayjs"
+    },
+    {
+      "id": "RateCardManager",
+      "name": "RateCardManager",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\admin\\RateCardManager.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "./forms/RateCardForm"
+    },
+    {
+      "id": "../../hooks/useRateCards"
+    },
+    {
+      "id": "../../types/rateCard"
+    },
+    {
+      "id": "AuthContext",
+      "name": "AuthContext",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\auth\\AuthProvider.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "AuthProvider",
+      "name": "AuthProvider",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\auth\\AuthContext.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "../../types/user"
+    },
+    {
+      "id": "../../services/api/apiClient"
+    },
+    {
+      "id": "LoginForm",
+      "name": "LoginForm",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\auth\\LoginForm.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "styled-components"
+    },
+    {
+      "id": "../../hooks/useAuth"
+    },
+    {
+      "id": "react-router-dom"
+    },
+    {
+      "id": "ProtectedRoute",
+      "name": "ProtectedRoute",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\auth\\ProtectedRoute.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "ResetPassword",
+      "name": "ResetPassword",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\auth\\ResetPassword.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "ApiErrorMessage",
+      "name": "ApiErrorMessage",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\common\\ApiErrorMessage.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "CRUDManager",
+      "name": "CRUDManager",
+      "type": "function",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\common\\CRUDManager.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": "API_CONTRACT",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "ErrorBoundary",
+      "name": "ErrorBoundary",
+      "type": "class",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\common\\ErrorBoundary.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": "SERVICE_INTERFACE",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "LoadingSpinner",
+      "name": "LoadingSpinner",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\common\\LoadingSpinner.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "LoadingState",
+      "name": "LoadingState",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\common\\LoadingState.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "Logo",
+      "name": "Logo",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\common\\Logo.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "../../assets/images/aulogistics-logo.svg"
+    },
+    {
+      "id": "QuoteForm",
+      "name": "QuoteForm",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\client\\QuoteForm\\QuoteForm.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "AppLayout",
+      "name": "AppLayout",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\layout\\AppLayout.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "../navigation/MainNav"
+    },
+    {
+      "id": "BaseLayout",
+      "name": "BaseLayout",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\layout\\BaseLayout.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "../common/ErrorBoundary"
+    },
+    {
+      "id": "MainNav",
+      "name": "MainNav",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\navigation\\MainNav.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "CustomerForm",
+      "name": "CustomerForm",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\admin\\forms\\CustomerForm.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "../../../types/customer"
+    },
+    {
+      "id": "RateCardForm",
+      "name": "RateCardForm",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\admin\\forms\\RateCardForm.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "../../../types/rateCard"
+    },
+    {
+      "id": "UserManagement",
+      "name": "UserManagement",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\admin\\UserManagement\\UserManagement.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "../../../services/api/users"
+    },
+    {
+      "id": "../../../types/user"
+    },
+    {
+      "id": "../../../services/api/quotes"
+    },
+    {
+      "id": "../../../services/api/rateCards"
+    },
+    {
+      "id": "QuoteList",
+      "name": "QuoteList",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\client\\QuoteList\\QuoteList.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "../../../types/quote"
+    },
+    {
+      "id": "CustomerList",
+      "name": "CustomerList",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\crm\\CustomerList\\CustomerList.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "../../../services/api/crm"
+    },
+    {
+      "id": "../../../styles/animations"
+    },
+    {
+      "id": "CustomerProfile",
+      "name": "CustomerProfile",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\crm\\CustomerProfile\\CustomerProfile.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "../../../styles/theme"
+    },
+    {
+      "id": "../../../services/api/types"
+    },
+    {
+      "id": "KanbanBoard",
+      "name": "KanbanBoard",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\crm\\KanbanBoard\\KanbanBoard.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "react-beautiful-dnd"
+    },
+    {
+      "id": "CRMDashboard",
+      "name": "CRMDashboard",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\components\\crm\\Reports\\CRMDashboard.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "fetchDashboardStats",
+      "name": "fetchDashboardStats",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\admin.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "fetchRecentQuotes",
+      "name": "fetchRecentQuotes",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\admin.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "approveQuote",
+      "name": "approveQuote",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\admin.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "admin"
+    },
+    {
+      "id": "ApiClientConfig",
+      "name": "ApiClientConfig",
+      "type": "interface",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\apiClient.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": "DATA_MODEL",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "ApiResponse",
+      "name": "ApiResponse",
+      "type": "interface",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\apiClient.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": "DATA_MODEL",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "ApiClient",
+      "name": "ApiClient",
+      "type": "class",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\apiClient.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": "SERVICE_INTERFACE",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "createApiClient",
+      "name": "createApiClient",
+      "type": "function",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\apiClient.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": "API_CONTRACT",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "apiClient"
+    },
+    {
+      "id": "fetchClientDashboard",
+      "name": "fetchClientDashboard",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\client.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "updateClientProfile",
+      "name": "updateClientProfile",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\client.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "createConversation",
+      "name": "createConversation",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\conversations.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "fetchConversations",
+      "name": "fetchConversations",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\conversations.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "fetchQuoteConversations",
+      "name": "fetchQuoteConversations",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\conversations.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "updateConversation",
+      "name": "updateConversation",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\conversations.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "deleteConversation",
+      "name": "deleteConversation",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\conversations.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "useQuoteConversations",
+      "name": "useQuoteConversations",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\conversations.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "useCreateConversation",
+      "name": "useCreateConversation",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\conversations.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "useUpdateConversation",
+      "name": "useUpdateConversation",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\conversations.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "useDeleteConversation",
+      "name": "useDeleteConversation",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\conversations.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "conversations"
+    },
+    {
+      "id": "../../types/conversation"
+    },
+    {
+      "id": "Interaction",
+      "name": "Interaction",
+      "type": "interface",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\crm.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": "DATA_MODEL",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "Deal",
+      "name": "Deal",
+      "type": "interface",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\crm.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": "DATA_MODEL",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "PipelineStats",
+      "name": "PipelineStats",
+      "type": "interface",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\crm.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": "DATA_MODEL",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "CustomerCRMStats",
+      "name": "CustomerCRMStats",
+      "type": "interface",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\crm.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": "DATA_MODEL",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "CustomerWithCRMStats",
+      "name": "CustomerWithCRMStats",
+      "type": "interface",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\crm.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": "DATA_MODEL",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "crmApi",
+      "name": "crmApi",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\crm.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "crm"
+    },
+    {
+      "id": "./apiClient"
+    },
+    {
+      "id": "./types"
+    },
+    {
+      "id": "createCustomer",
+      "name": "createCustomer",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\customers.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "fetchCustomers",
+      "name": "fetchCustomers",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\customers.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "fetchCustomerById",
+      "name": "fetchCustomerById",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\customers.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "updateCustomer",
+      "name": "updateCustomer",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\customers.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "deleteCustomer",
+      "name": "deleteCustomer",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\customers.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "useCustomers",
+      "name": "useCustomers",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\customers.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "useCustomer",
+      "name": "useCustomer",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\customers.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "useCreateCustomer",
+      "name": "useCreateCustomer",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\customers.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "useUpdateCustomer",
+      "name": "useUpdateCustomer",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\customers.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "useDeleteCustomer",
+      "name": "useDeleteCustomer",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\customers.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "customers"
+    },
+    {
+      "id": "QuoteGenerateRequest",
+      "name": "QuoteGenerateRequest",
+      "type": "interface",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\quotes.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": "DATA_MODEL",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "createQuote",
+      "name": "createQuote",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\quotes.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "fetchQuotes",
+      "name": "fetchQuotes",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\quotes.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "fetchQuoteById",
+      "name": "fetchQuoteById",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\quotes.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "updateQuoteStatus",
+      "name": "updateQuoteStatus",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\quotes.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "deleteQuote",
+      "name": "deleteQuote",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\quotes.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "generateQuote",
+      "name": "generateQuote",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\quotes.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "quotes"
+    },
+    {
+      "id": "fetchRateCards",
+      "name": "fetchRateCards",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\rateCards.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "fetchRateCardById",
+      "name": "fetchRateCardById",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\rateCards.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "createRateCard",
+      "name": "createRateCard",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\rateCards.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "updateRateCard",
+      "name": "updateRateCard",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\rateCards.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "deleteRateCard",
+      "name": "deleteRateCard",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\rateCards.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "rateCards"
+    },
+    {
+      "id": "ApiError",
+      "name": "ApiError",
+      "type": "interface",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\types.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": "DATA_MODEL",
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "InteractionType",
+      "name": "InteractionType",
+      "type": "enum",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\types.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "DealStage",
+      "name": "DealStage",
+      "type": "enum",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\types.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "fetchUsers",
+      "name": "fetchUsers",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\users.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "createUser",
+      "name": "createUser",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\users.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "updateUser",
+      "name": "updateUser",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\users.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "deleteUser",
+      "name": "deleteUser",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\users.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "useAuth",
+      "name": "useAuth",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\auth\\AuthContext.tsx",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "./authService"
+    },
+    {
+      "id": "login",
+      "name": "login",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\auth\\authService.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "logout",
+      "name": "logout",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\auth\\authService.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "getCurrentUser",
+      "name": "getCurrentUser",
+      "type": "const",
+      "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\auth\\authService.ts",
+      "line_number": 1,
+      "docstring": "",
+      "interface_type": null,
+      "domain_group": "QUOTE_MANAGEMENT",
+      "semantic_group": null,
+      "content": null
+    },
+    {
+      "id": "authService"
+    }
+  ],
+  "edges": [
+    {
+      "source": "LoginRequest",
+      "target": "login",
+      "edge_type": "weakly_related",
+      "weight": 0.7233444452285767,
+      "properties": {
+        "similarity_score": 0.7233444452285767,
+        "relationship_confidence": 0.7233444452285767
+      }
+    },
+    {
+      "source": "PasswordResetRequest",
+      "target": "PasswordResetConfirm",
+      "edge_type": "weakly_related",
+      "weight": 0.7989168763160706,
+      "properties": {
+        "similarity_score": 0.7989168763160706,
+        "relationship_confidence": 0.7989168763160706
+      }
+    },
+    {
+      "source": "auth",
+      "target": "./client",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "client",
+      "target": "axios",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "Customer",
+      "target": "CustomerCreate",
+      "edge_type": "weakly_related",
+      "weight": 0.7187855243682861,
+      "properties": {
+        "similarity_score": 0.7187855243682861,
+        "relationship_confidence": 0.7187855243682861
+      }
+    },
+    {
+      "source": "UserUpdate",
+      "target": "CustomerUpdate",
+      "edge_type": "weakly_related",
+      "weight": 0.7936674356460571,
+      "properties": {
+        "similarity_score": 0.7936674356460571,
+        "relationship_confidence": 0.7936674356460571
+      }
+    },
+    {
+      "source": "UserUpdate",
+      "target": "updateUser",
+      "edge_type": "weakly_related",
+      "weight": 0.7345707416534424,
+      "properties": {
+        "similarity_score": 0.7345707416534424,
+        "relationship_confidence": 0.7345707416534424
+      }
+    },
+    {
+      "source": "CustomerCreate",
+      "target": "CustomerManager",
+      "edge_type": "weakly_related",
+      "weight": 0.7059112787246704,
+      "properties": {
+        "similarity_score": 0.7059112787246704,
+        "relationship_confidence": 0.7059112787246704
+      }
+    },
+    {
+      "source": "CustomerCreate",
+      "target": "CustomerForm",
+      "edge_type": "weakly_related",
+      "weight": 0.7083534002304077,
+      "properties": {
+        "similarity_score": 0.7083534002304077,
+        "relationship_confidence": 0.7083534002304077
+      }
+    },
+    {
+      "source": "users",
+      "target": "./client",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "users",
+      "target": "axios",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "users",
+      "target": "../../types/user",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CustomerManager",
+      "target": "react",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CustomerManager",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CustomerManager",
+      "target": "../common/CRUDManager",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CustomerManager",
+      "target": "./forms/CustomerForm",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CustomerManager",
+      "target": "../../hooks/useCustomers",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CustomerManager",
+      "target": "../../types/customer",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteGenerator",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteGenerator",
+      "target": "@tanstack/react-query",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteGenerator",
+      "target": "../../services/api/quotes",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteGenerator",
+      "target": "../../hooks/useCustomers",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteManager",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteManager",
+      "target": "@ant-design/icons",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteManager",
+      "target": "../common/CRUDManager",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteManager",
+      "target": "../forms/QuoteForm",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteManager",
+      "target": "../../hooks/useQuotes",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteManager",
+      "target": "../../types/quote",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteManager",
+      "target": "dayjs",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteManager",
+      "target": "QuoteList",
+      "edge_type": "weakly_related",
+      "weight": 0.716498613357544,
+      "properties": {
+        "similarity_score": 0.716498613357544,
+        "relationship_confidence": 0.716498613357544
+      }
+    },
+    {
+      "source": "RateCardManager",
+      "target": "react",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "RateCardManager",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "RateCardManager",
+      "target": "../common/CRUDManager",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "RateCardManager",
+      "target": "./forms/RateCardForm",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "RateCardManager",
+      "target": "../../hooks/useRateCards",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "RateCardManager",
+      "target": "../../types/rateCard",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "RateCardManager",
+      "target": "dayjs",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "RateCardManager",
+      "target": "RateCardForm",
+      "edge_type": "weakly_related",
+      "weight": 0.7946293950080872,
+      "properties": {
+        "similarity_score": 0.7946293950080872,
+        "relationship_confidence": 0.7946293950080872
+      }
+    },
+    {
+      "source": "AuthContext",
+      "target": "../../types/user",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "AuthContext",
+      "target": "./authService",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "AuthProvider",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "AuthProvider",
+      "target": "../../types/user",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "AuthProvider",
+      "target": "../../services/api/apiClient",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "LoginForm",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "LoginForm",
+      "target": "@ant-design/icons",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "LoginForm",
+      "target": "styled-components",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "LoginForm",
+      "target": "../../hooks/useAuth",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "LoginForm",
+      "target": "react-router-dom",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "LoginForm",
+      "target": "login",
+      "edge_type": "weakly_related",
+      "weight": 0.7261819839477539,
+      "properties": {
+        "similarity_score": 0.7261819839477539,
+        "relationship_confidence": 0.7261819839477539
+      }
+    },
+    {
+      "source": "ProtectedRoute",
+      "target": "react",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "ProtectedRoute",
+      "target": "react-router-dom",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "ProtectedRoute",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "ProtectedRoute",
+      "target": "../../hooks/useAuth",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "ResetPassword",
+      "target": "react",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "ResetPassword",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "ResetPassword",
+      "target": "@ant-design/icons",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "ResetPassword",
+      "target": "styled-components",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "ResetPassword",
+      "target": "../../hooks/useAuth",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "ResetPassword",
+      "target": "react-router-dom",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "ApiErrorMessage",
+      "target": "react",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "ApiErrorMessage",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "ApiErrorMessage",
+      "target": "axios",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CRUDManager",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CRUDManager",
+      "target": "@ant-design/icons",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CRUDManager",
+      "target": "@tanstack/react-query",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "ErrorBoundary",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "ErrorBoundary",
+      "target": "styled-components",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "LoadingSpinner",
+      "target": "react",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "LoadingSpinner",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "LoadingSpinner",
+      "target": "styled-components",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "LoadingState",
+      "target": "react",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "LoadingState",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "LoadingState",
+      "target": "@ant-design/icons",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "LoadingState",
+      "target": "styled-components",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "Logo",
+      "target": "react",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "Logo",
+      "target": "styled-components",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "Logo",
+      "target": "../../assets/images/aulogistics-logo.svg",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteForm",
+      "target": "react",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteForm",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteForm",
+      "target": "@ant-design/icons",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteForm",
+      "target": "styled-components",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteForm",
+      "target": "../../types/quote",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteForm",
+      "target": "../../hooks/useRateCards",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteForm",
+      "target": "../../hooks/useCustomers",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteForm",
+      "target": "@tanstack/react-query",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteForm",
+      "target": "../../../services/api/quotes",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteForm",
+      "target": "../../../services/api/rateCards",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "AppLayout",
+      "target": "react",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "AppLayout",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "AppLayout",
+      "target": "styled-components",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "AppLayout",
+      "target": "../navigation/MainNav",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "AppLayout",
+      "target": "react-router-dom",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "BaseLayout",
+      "target": "react",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "BaseLayout",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "BaseLayout",
+      "target": "styled-components",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "BaseLayout",
+      "target": "../common/ErrorBoundary",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "BaseLayout",
+      "target": "../navigation/MainNav",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "BaseLayout",
+      "target": "../../hooks/useAuth",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "MainNav",
+      "target": "react",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "MainNav",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "MainNav",
+      "target": "@ant-design/icons",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "MainNav",
+      "target": "react-router-dom",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "MainNav",
+      "target": "styled-components",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "MainNav",
+      "target": "../../hooks/useAuth",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "MainNav",
+      "target": "../../types/user",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CustomerForm",
+      "target": "react",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CustomerForm",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CustomerForm",
+      "target": "../../../types/customer",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "RateCardForm",
+      "target": "react",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "RateCardForm",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "RateCardForm",
+      "target": "../../../types/rateCard",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "RateCardForm",
+      "target": "dayjs",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "UserManagement",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "UserManagement",
+      "target": "@tanstack/react-query",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "UserManagement",
+      "target": "../../../services/api/users",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "UserManagement",
+      "target": "../../../types/user",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteList",
+      "target": "react",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteList",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteList",
+      "target": "@tanstack/react-query",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteList",
+      "target": "../../../services/api/quotes",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteList",
+      "target": "../../../types/quote",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "QuoteList",
+      "target": "react-router-dom",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CustomerList",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CustomerList",
+      "target": "@ant-design/icons",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CustomerList",
+      "target": "react-router-dom",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CustomerList",
+      "target": "styled-components",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CustomerList",
+      "target": "../../../services/api/crm",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CustomerList",
+      "target": "../../../styles/animations",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CustomerProfile",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CustomerProfile",
+      "target": "styled-components",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CustomerProfile",
+      "target": "../../../styles/theme",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CustomerProfile",
+      "target": "../../../styles/animations",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CustomerProfile",
+      "target": "../../../services/api/crm",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CustomerProfile",
+      "target": "../../../services/api/types",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "KanbanBoard",
+      "target": "react-beautiful-dnd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "KanbanBoard",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "KanbanBoard",
+      "target": "styled-components",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "KanbanBoard",
+      "target": "../../../styles/theme",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "KanbanBoard",
+      "target": "../../../styles/animations",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "KanbanBoard",
+      "target": "../../../services/api/crm",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "KanbanBoard",
+      "target": "../../../services/api/types",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CRMDashboard",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CRMDashboard",
+      "target": "styled-components",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CRMDashboard",
+      "target": "../../../styles/theme",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CRMDashboard",
+      "target": "../../../styles/animations",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CRMDashboard",
+      "target": "../../../services/api/crm",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "CRMDashboard",
+      "target": "../../../services/api/types",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "fetchRecentQuotes",
+      "target": "fetchQuoteConversations",
+      "edge_type": "weakly_related",
+      "weight": 0.7916696667671204,
+      "properties": {
+        "similarity_score": 0.7916696667671204,
+        "relationship_confidence": 0.7916696667671204
+      }
+    },
+    {
+      "source": "fetchRecentQuotes",
+      "target": "fetchQuotes",
+      "edge_type": "moderately_related",
+      "weight": 0.8416285514831543,
+      "properties": {
+        "similarity_score": 0.8416285514831543,
+        "relationship_confidence": 0.8416285514831543
+      }
+    },
+    {
+      "source": "fetchRecentQuotes",
+      "target": "fetchQuoteById",
+      "edge_type": "weakly_related",
+      "weight": 0.7501501441001892,
+      "properties": {
+        "similarity_score": 0.7501501441001892,
+        "relationship_confidence": 0.7501501441001892
+      }
+    },
+    {
+      "source": "admin",
+      "target": "axios",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "ApiClientConfig",
+      "target": "ApiClient",
+      "edge_type": "weakly_related",
+      "weight": 0.7883661985397339,
+      "properties": {
+        "similarity_score": 0.7883661985397339,
+        "relationship_confidence": 0.7883661985397339
+      }
+    },
+    {
+      "source": "apiClient",
+      "target": "antd",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "fetchQuoteConversations",
+      "target": "useQuoteConversations",
+      "edge_type": "weakly_related",
+      "weight": 0.7649548053741455,
+      "properties": {
+        "similarity_score": 0.7649548053741455,
+        "relationship_confidence": 0.7649548053741455
+      }
+    },
+    {
+      "source": "fetchQuoteConversations",
+      "target": "fetchQuotes",
+      "edge_type": "highly_related",
+      "weight": 0.9179654717445374,
+      "properties": {
+        "similarity_score": 0.9179654717445374,
+        "relationship_confidence": 0.9179654717445374
+      }
+    },
+    {
+      "source": "fetchQuoteConversations",
+      "target": "fetchQuoteById",
+      "edge_type": "moderately_related",
+      "weight": 0.8336009979248047,
+      "properties": {
+        "similarity_score": 0.8336009979248047,
+        "relationship_confidence": 0.8336009979248047
+      }
+    },
+    {
+      "source": "updateConversation",
+      "target": "useUpdateConversation",
+      "edge_type": "moderately_related",
+      "weight": 0.8087908029556274,
+      "properties": {
+        "similarity_score": 0.8087908029556274,
+        "relationship_confidence": 0.8087908029556274
+      }
+    },
+    {
+      "source": "useQuoteConversations",
+      "target": "createQuote",
+      "edge_type": "weakly_related",
+      "weight": 0.7504189014434814,
+      "properties": {
+        "similarity_score": 0.7504189014434814,
+        "relationship_confidence": 0.7504189014434814
+      }
+    },
+    {
+      "source": "useQuoteConversations",
+      "target": "generateQuote",
+      "edge_type": "weakly_related",
+      "weight": 0.7325413823127747,
+      "properties": {
+        "similarity_score": 0.7325413823127747,
+        "relationship_confidence": 0.7325413823127747
+      }
+    },
+    {
+      "source": "useUpdateConversation",
+      "target": "useUpdateCustomer",
+      "edge_type": "weakly_related",
+      "weight": 0.7783117890357971,
+      "properties": {
+        "similarity_score": 0.7783117890357971,
+        "relationship_confidence": 0.7783117890357971
+      }
+    },
+    {
+      "source": "useDeleteConversation",
+      "target": "useDeleteCustomer",
+      "edge_type": "weakly_related",
+      "weight": 0.7016226649284363,
+      "properties": {
+        "similarity_score": 0.7016226649284363,
+        "relationship_confidence": 0.7016226649284363
+      }
+    },
+    {
+      "source": "conversations",
+      "target": "./client",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "conversations",
+      "target": "../../types/conversation",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "conversations",
+      "target": "@tanstack/react-query",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "Interaction",
+      "target": "InteractionType",
+      "edge_type": "weakly_related",
+      "weight": 0.7534051537513733,
+      "properties": {
+        "similarity_score": 0.7534051537513733,
+        "relationship_confidence": 0.7534051537513733
+      }
+    },
+    {
+      "source": "CustomerCRMStats",
+      "target": "CustomerWithCRMStats",
+      "edge_type": "highly_related",
+      "weight": 0.9351186752319336,
+      "properties": {
+        "similarity_score": 0.9351186752319336,
+        "relationship_confidence": 0.9351186752319336
+      }
+    },
+    {
+      "source": "crm",
+      "target": "./apiClient",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "crm",
+      "target": "./types",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "fetchCustomers",
+      "target": "fetchCustomerById",
+      "edge_type": "weakly_related",
+      "weight": 0.7029366493225098,
+      "properties": {
+        "similarity_score": 0.7029366493225098,
+        "relationship_confidence": 0.7029366493225098
+      }
+    },
+    {
+      "source": "updateCustomer",
+      "target": "useUpdateCustomer",
+      "edge_type": "weakly_related",
+      "weight": 0.7683142423629761,
+      "properties": {
+        "similarity_score": 0.7683142423629761,
+        "relationship_confidence": 0.7683142423629761
+      }
+    },
+    {
+      "source": "useCustomers",
+      "target": "useCustomer",
+      "edge_type": "highly_related",
+      "weight": 0.9080374240875244,
+      "properties": {
+        "similarity_score": 0.9080374240875244,
+        "relationship_confidence": 0.9080374240875244
+      }
+    },
+    {
+      "source": "useCustomer",
+      "target": "useCreateCustomer",
+      "edge_type": "weakly_related",
+      "weight": 0.7464004755020142,
+      "properties": {
+        "similarity_score": 0.7464004755020142,
+        "relationship_confidence": 0.7464004755020142
+      }
+    },
+    {
+      "source": "customers",
+      "target": "./client",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "customers",
+      "target": "../../types/customer",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "customers",
+      "target": "@tanstack/react-query",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "createQuote",
+      "target": "fetchQuotes",
+      "edge_type": "weakly_related",
+      "weight": 0.705498218536377,
+      "properties": {
+        "similarity_score": 0.705498218536377,
+        "relationship_confidence": 0.705498218536377
+      }
+    },
+    {
+      "source": "createQuote",
+      "target": "deleteQuote",
+      "edge_type": "weakly_related",
+      "weight": 0.7226953506469727,
+      "properties": {
+        "similarity_score": 0.7226953506469727,
+        "relationship_confidence": 0.7226953506469727
+      }
+    },
+    {
+      "source": "createQuote",
+      "target": "generateQuote",
+      "edge_type": "highly_related",
+      "weight": 0.9095731377601624,
+      "properties": {
+        "similarity_score": 0.9095731377601624,
+        "relationship_confidence": 0.9095731377601624
+      }
+    },
+    {
+      "source": "fetchQuotes",
+      "target": "fetchQuoteById",
+      "edge_type": "moderately_related",
+      "weight": 0.8736487627029419,
+      "properties": {
+        "similarity_score": 0.8736487627029419,
+        "relationship_confidence": 0.8736487627029419
+      }
+    },
+    {
+      "source": "fetchQuotes",
+      "target": "generateQuote",
+      "edge_type": "weakly_related",
+      "weight": 0.7119348049163818,
+      "properties": {
+        "similarity_score": 0.7119348049163818,
+        "relationship_confidence": 0.7119348049163818
+      }
+    },
+    {
+      "source": "quotes",
+      "target": "./client",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "quotes",
+      "target": "../../types/quote",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "fetchRateCards",
+      "target": "fetchRateCardById",
+      "edge_type": "moderately_related",
+      "weight": 0.8362388014793396,
+      "properties": {
+        "similarity_score": 0.8362388014793396,
+        "relationship_confidence": 0.8362388014793396
+      }
+    },
+    {
+      "source": "createRateCard",
+      "target": "updateRateCard",
+      "edge_type": "weakly_related",
+      "weight": 0.7395753860473633,
+      "properties": {
+        "similarity_score": 0.7395753860473633,
+        "relationship_confidence": 0.7395753860473633
+      }
+    },
+    {
+      "source": "rateCards",
+      "target": "axios",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "rateCards",
+      "target": "../../types/rateCard",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "authService",
+      "target": "axios",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    },
+    {
+      "source": "authService",
+      "target": "../../types/user",
+      "type": "imports",
+      "weight": 1.0,
+      "properties": null
+    }
+  ],
+  "metadata": {
+    "generated_at": "20250225_175700",
+    "node_count": 152,
+    "edge_count": 188,
+    "health_issues": {
+      "health_score": 0.8666666666666667,
+      "metrics": {
+        "duplicates": [],
+        "divergence": [],
+        "orphans": [
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "Token",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\api\\auth.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "authApi",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\api\\auth.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "User",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\api\\users.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "UserCreate",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\api\\users.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "usersApi",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\api\\users.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "WebSocketMessage",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\api\\websocket.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "WebSocketClient",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\api\\websocket.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "getWebSocketClient",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\api\\websocket.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "fetchDashboardStats",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\admin.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "approveQuote",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\admin.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "ApiResponse",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\apiClient.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "createApiClient",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\apiClient.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "fetchClientDashboard",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\client.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "updateClientProfile",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\client.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "createConversation",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\conversations.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "fetchConversations",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\conversations.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "deleteConversation",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\conversations.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "useCreateConversation",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\conversations.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "Deal",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\crm.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "PipelineStats",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\crm.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "crmApi",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\crm.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "createCustomer",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\customers.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "deleteCustomer",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\customers.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "QuoteGenerateRequest",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\quotes.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "updateQuoteStatus",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\quotes.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "deleteRateCard",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\rateCards.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "ApiError",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\types.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "DealStage",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\types.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "fetchUsers",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\users.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "createUser",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\users.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "deleteUser",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\api\\users.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "useAuth",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\auth\\AuthContext.tsx"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "logout",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\auth\\authService.ts"
+          },
+          {
+            "type": "orphan",
+            "severity": "medium",
+            "node": "getCurrentUser",
+            "file": "C:\\Users\\Seth R\\Desktop\\AUL Quote App\\frontend\\src\\services\\auth\\authService.ts"
+          }
+        ]
+      },
+      "recommendations": [
+        "Found 34 orphaned components. Consider removing unused code or properly integrating these components."
+      ]
+    }
+  }
+}
