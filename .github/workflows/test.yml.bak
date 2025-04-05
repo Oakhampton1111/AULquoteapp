@@ -1,210 +1,199 @@
 name: AUL Quote App Tests
-
-on:
-  push:
-    branches: [ master ]
+true:
   pull_request:
-    branches: [ master ]
-  workflow_dispatch:  # Allows manual triggering from the GitHub UI
-
+    branches:
+    - master
+  push:
+    branches:
+    - master
+  workflow_dispatch: null
 jobs:
-  test-backend:
-    runs-on: ubuntu-latest
-    services:
-      postgres:
-        image: postgres:15
-        env:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
-          POSTGRES_DB: test_warehouse_quotes
-        ports:
-          - 5432:5432
-        options: >-
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
-      
-      redis:
-        image: redis:7
-        ports:
-          - 6379:6379
-        options: >-
-          --health-cmd "redis-cli ping"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
-
-    steps:
-    - uses: actions/checkout@v4
-    
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.11'
-        cache: 'pip'
-    
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-        pip install pytest pytest-asyncio pytest-cov
-    
-    - name: Run all backend tests
-      env:
-        DATABASE_URL: postgresql://postgres:postgres@localhost:5432/test_warehouse_quotes
-        REDIS_URL: redis://localhost:6379/0
-        TESTING: 1
-      run: |
-        # Run all tests including end-to-end tests
-        pytest tests/ --cov=warehouse_quote_app --cov-report=xml --cov-report=term -v
-    
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v3
-      with:
-        file: ./coverage.xml
-        fail_ci_if_error: false  # Don't fail the build if codecov upload fails
-
   code-quality:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.11'
-        cache: 'pip'
-    
+        cache: pip
+        python-version: '3.9'
     - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
+      run: 'python -m pip install --upgrade pip
+
         pip install -r requirements.txt
+
         pip install black isort mypy pylint
-    
-    - name: Run black
-      continue-on-error: true  # Continue even if black check fails
+
+        '
+    - continue-on-error: true
+      name: Run black
       run: black . --check
-    
-    - name: Run isort
-      continue-on-error: true  # Continue even if isort check fails
+    - continue-on-error: true
+      name: Run isort
       run: isort . --check-only --profile black
-    
-    - name: Run mypy
-      continue-on-error: true  # Continue even if mypy check fails
+    - continue-on-error: true
+      name: Run mypy
       run: mypy warehouse_quote_app
-    
-    - name: Run pylint
-      continue-on-error: true  # Continue even if pylint check fails
+    - continue-on-error: true
+      name: Run pylint
       run: pylint warehouse_quote_app
-
-  frontend-tests:
-    runs-on: ubuntu-latest
-    
-    steps:
-    - uses: actions/checkout@v4
-    
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20'
-        cache: 'npm'
-        cache-dependency-path: frontend/package-lock.json
-    
-    - name: Install dependencies
-      working-directory: frontend
-      run: npm ci || npm install  # Fallback to npm install if npm ci fails
-    
-    - name: Run frontend tests
-      working-directory: frontend
-      continue-on-error: true  # Continue even if frontend tests fail
-      run: npm test
-
   e2e-tests:
-    needs: [test-backend, frontend-tests]
+    needs:
+    - test-backend
+    - frontend-tests
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: postgres:15
         env:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
           POSTGRES_DB: test_warehouse_quotes
-        ports:
-          - 5432:5432
-        options: >-
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_USER: postgres
+        image: postgres:15
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s
           --health-retries 5
-      
+        ports:
+        - 5432:5432
       redis:
         image: redis:7
+        options: --health-cmd "redis-cli ping" --health-interval 10s --health-timeout
+          5s --health-retries 5
         ports:
-          - 6379:6379
-        options: >-
-          --health-cmd "redis-cli ping"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
-
+        - 6379:6379
     steps:
     - uses: actions/checkout@v4
-    
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.11'
-        cache: 'pip'
-    
+        cache: pip
+        python-version: '3.9'
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '20'
-        cache: 'npm'
+        cache: npm
         cache-dependency-path: frontend/package-lock.json
-    
+        node-version: '20'
     - name: Install Python dependencies
-      run: |
-        python -m pip install --upgrade pip
+      run: 'python -m pip install --upgrade pip
+
         pip install -r requirements.txt
+
         pip install pytest pytest-asyncio pytest-cov
-    
+
+        '
     - name: Install Node.js dependencies
+      run: npm ci || npm install
       working-directory: frontend
-      run: npm ci || npm install  # Fallback to npm install if npm ci fails
-    
     - name: Install Playwright browsers
+      run: npx playwright install --with-deps || true
       working-directory: frontend
-      run: npx playwright install --with-deps || true  # Continue even if installation fails
-    
-    - name: Start backend server
-      env:
+    - env:
         DATABASE_URL: postgresql://postgres:postgres@localhost:5432/test_warehouse_quotes
         REDIS_URL: redis://localhost:6379/0
         TESTING: 1
-      run: |
-        # Start the backend server in the background
+      name: Start backend server
+      run: '# Start the backend server in the background
+
         python -m warehouse_quote_app.master &
+
         # Wait for the server to start
+
         sleep 10
-    
-    - name: Run end-to-end tests
+
+        '
+    - continue-on-error: true
       env:
         DATABASE_URL: postgresql://postgres:postgres@localhost:5432/test_warehouse_quotes
         REDIS_URL: redis://localhost:6379/0
         TESTING: 1
-      continue-on-error: true  # Continue even if e2e tests fail
-      run: |
-        # Run specific end-to-end tests
-        pytest tests/test_end_to_end_experience.py tests/test_end_to_end_async.py -v
-    
-    - name: Upload test results
-      if: always()
+      name: Run end-to-end tests
+      run: '# Run specific end-to-end tests
+
+        pytest tests/test_end_to_end_experience.py tests/test_end_to_end_async.py
+        -v
+
+        '
+    - if: always()
+      name: Upload test results
       uses: actions/upload-artifact@v3
       with:
         name: e2e-test-results
-        path: |
-          test-results/
+        path: 'test-results/
+
           logs/
+
+          '
         retention-days: 30
+  frontend-tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        cache: npm
+        cache-dependency-path: frontend/package-lock.json
+        node-version: '20'
+    - name: Install dependencies
+      run: npm ci || npm install
+      working-directory: frontend
+    - continue-on-error: true
+      name: Run frontend tests
+      run: npm test
+      working-directory: frontend
+  test-backend:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        env:
+          POSTGRES_DB: test_warehouse_quotes
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_USER: postgres
+        image: postgres:15
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s
+          --health-retries 5
+        ports:
+        - 5432:5432
+      redis:
+        image: redis:7
+        options: --health-cmd "redis-cli ping" --health-interval 10s --health-timeout
+          5s --health-retries 5
+        ports:
+        - 6379:6379
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        cache: pip
+        python-version: '3.9'
+    - name: Install dependencies
+      run: 'python -m pip install --upgrade pip
+
+        pip install -r requirements.txt
+
+        pip install pytest pytest-asyncio pytest-cov
+
+        '
+    - env:
+        DATABASE_URL: postgresql://postgres:postgres@localhost:5432/test_warehouse_quotes
+        REDIS_URL: redis://localhost:6379/0
+        TESTING: 1
+      name: Run all backend tests
+      run: '# Run all tests including end-to-end tests
+
+        pytest tests/ --cov=warehouse_quote_app --cov-report=xml --cov-report=term
+        -v
+
+        '
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        fail_ci_if_error: false
+        file: ./coverage.xml
+'on':
+  pull_request:
+    branches:
+    - master
+  push:
+    branches:
+    - master

@@ -1,127 +1,128 @@
 name: AUL Quote App CI
-
-on:
-  push:
-    branches: [ master ]
+true:
   pull_request:
-    branches: [ master ]
-  workflow_dispatch:  # Allows manual triggering from the GitHub UI
-
+    branches:
+    - master
+  push:
+    branches:
+    - master
+  workflow_dispatch: null
 jobs:
   code-quality:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.11]
-
     steps:
     - uses: actions/checkout@v4
-    
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v4
       with:
-        python-version: ${{ matrix.python-version }}
-    
+        python-version: '3.9'
     - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
+      run: 'python -m pip install --upgrade pip
+
         pip install -r requirements.txt
+
         pip install mypy pytest pytest-cov pytest-asyncio black isort pylint
-    
-    - name: Run black
-      continue-on-error: true  # Continue even if black check fails
+
+        '
+    - continue-on-error: true
+      name: Run black
       run: black . --check
-    
-    - name: Run isort
-      continue-on-error: true  # Continue even if isort check fails
+    - continue-on-error: true
+      name: Run isort
       run: isort . --check-only --profile black
-    
-    - name: Run mypy
-      continue-on-error: true  # Continue even if mypy check fails
+    - continue-on-error: true
+      name: Run mypy
       run: mypy warehouse_quote_app
-    
-    - name: Run pylint
-      continue-on-error: true  # Continue even if pylint check fails
+    - continue-on-error: true
+      name: Run pylint
       run: pylint warehouse_quote_app --disable=C0111,C0103
-    
-    - name: Run all tests with coverage
+    - continue-on-error: true
       env:
         TESTING: 1
-      continue-on-error: true  # Continue even if tests fail
-      run: |
-        # Run all tests including end-to-end tests
-        pytest tests/ --cov=warehouse_quote_app --cov-report=xml --cov-report=term -v
-    
+      name: Run all tests with coverage
+      run: '# Run all tests including end-to-end tests
+
+        pytest tests/ --cov=warehouse_quote_app --cov-report=xml --cov-report=term
+        -v
+
+        '
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
       with:
+        fail_ci_if_error: false
         file: ./coverage.xml
-        fail_ci_if_error: false  # Don't fail the build if codecov upload fails
-
+    strategy:
+      matrix:
+        python-version:
+        - 3.11
   comprehensive-tests:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: postgres:15
         env:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
           POSTGRES_DB: test_warehouse_quotes
-        ports:
-          - 5432:5432
-        options: >-
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_USER: postgres
+        image: postgres:15
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s
           --health-retries 5
-      
+        ports:
+        - 5432:5432
       redis:
         image: redis:7
+        options: --health-cmd "redis-cli ping" --health-interval 10s --health-timeout
+          5s --health-retries 5
         ports:
-          - 6379:6379
-        options: >-
-          --health-cmd "redis-cli ping"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
-
+        - 6379:6379
     steps:
     - uses: actions/checkout@v4
-    
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.11'
-        cache: 'pip'
-    
+        cache: pip
+        python-version: '3.9'
     - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
+      run: 'python -m pip install --upgrade pip
+
         pip install -r requirements.txt
+
         pip install pytest pytest-asyncio pytest-cov
-    
-    - name: Run all tests
+
+        '
+    - continue-on-error: true
       env:
         DATABASE_URL: postgresql://postgres:postgres@localhost:5432/test_warehouse_quotes
         REDIS_URL: redis://localhost:6379/0
         TESTING: 1
-      continue-on-error: true  # Continue even if tests fail
-      run: |
-        # Run all tests including end-to-end tests
-        pytest tests/ --cov=warehouse_quote_app --cov-report=xml --cov-report=term -v
-    
-    - name: Generate test report
-      if: always()
-      run: |
-        echo "## Test Summary" > test-report.md
+      name: Run all tests
+      run: '# Run all tests including end-to-end tests
+
+        pytest tests/ --cov=warehouse_quote_app --cov-report=xml --cov-report=term
+        -v
+
+        '
+    - if: always()
+      name: Generate test report
+      run: 'echo "## Test Summary" > test-report.md
+
         echo "Tests completed at $(date)" >> test-report.md
+
         echo "" >> test-report.md
+
         echo "Full logs available in the GitHub Actions output." >> test-report.md
-    
-    - name: Upload test report
-      if: always()
+
+        '
+    - if: always()
+      name: Upload test report
       uses: actions/upload-artifact@v3
       with:
         name: test-report
         path: test-report.md
         retention-days: 30
+'on':
+  pull_request:
+    branches:
+    - master
+  push:
+    branches:
+    - master
