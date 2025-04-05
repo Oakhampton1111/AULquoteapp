@@ -185,7 +185,7 @@ jobs:
         TESTING: 1
       run: |
         # Start the backend server in the background
-        python -m warehouse_quote_app.master &
+        python -m warehouse_quote_app.main &
         # Wait for the server to start
         sleep 10
     
