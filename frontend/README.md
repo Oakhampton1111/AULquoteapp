@@ -31,7 +31,7 @@ npm install
 npm run dev
 
 # Build for production
-npm run build
+npm run build:prod
 
 # Preview production build
 npm run preview
@@ -39,9 +39,67 @@ npm run preview
 # Run tests
 npm test
 
+# Run unit tests only
+npm run test:unit
+
 # Run E2E tests
 npm run test:e2e
+
+# Run E2E tests with UI
+npm run test:e2e:ui
+
+# Run tests with coverage
+npm run test:coverage
 ```
+
+## Deployment
+
+### Using Docker
+
+To build and run the application using Docker:
+
+```bash
+# Build the Docker image
+docker build -t aul-quote-app-frontend .
+
+# Run the Docker container
+docker run -p 80:80 aul-quote-app-frontend
+```
+
+### Using Docker Compose
+
+To run the entire application stack (frontend, backend, and database) using Docker Compose:
+
+```bash
+# Start the application stack
+docker-compose up -d
+
+# Stop the application stack
+docker-compose down
+```
+
+### Manual Deployment
+
+To deploy the application manually:
+
+1. Build the application:
+
+```bash
+npm run build:prod
+```
+
+2. Deploy the contents of the `dist` directory to your web server.
+
+3. Configure your web server to serve the application (see `nginx.conf` for an example configuration).
+
+## Environment Variables
+
+The application uses the following environment variables:
+
+- `VITE_API_URL`: The URL of the API server
+- `VITE_APP_NAME`: The name of the application
+- `VITE_APP_VERSION`: The version of the application
+- `VITE_USE_MOCKS`: Whether to use mock data (true/false)
 
 ## Project Structure
 
@@ -496,4 +554,4 @@ For more details on testing, see the main project [Testing Guide](../docs/TESTIN
 
 ## License
 
-MIT License - see LICENSE for details
+This project is proprietary and confidential. Unauthorized copying, distribution, or use is strictly prohibited.

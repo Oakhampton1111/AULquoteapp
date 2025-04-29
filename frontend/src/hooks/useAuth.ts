@@ -1,10 +1,10 @@
-import { useContext, useCallback } from 'react';
+import { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMutation, useQuery } from '@tanstack/react-query';
 import { message } from 'antd';
 import apiClient from '../services/api/apiClient';
 import { User } from '../types/user';
-import { AuthContext } from '../services/auth/AuthContext';
+import { useAuth as useAuthContext } from '../services/auth/AuthContext';
 
 interface LoginCredentials {
   email: string;
@@ -17,11 +17,7 @@ interface AuthResponse {
 }
 
 export const useAuth = () => {
-  const context = useContext(AuthContext);
-  if (!context) {
-    throw new Error('useAuth must be used within an AuthProvider');
-  }
-  return context;
+  return useAuthContext();
 };
 
 export const useLogin = () => {

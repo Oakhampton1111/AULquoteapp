@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { AuthProvider } from './services/auth/AuthContext';
 import { ProtectedRoute } from './components/auth/ProtectedRoute';
 import { AppLayout } from './components/layout/AppLayout';
 import { LoginForm } from './components/auth/LoginForm';
 import { ErrorBoundary } from './components/common/ErrorBoundary';
 import { message } from 'antd';
+import { monitorWebVitals } from './utils/performance';
 
 // Admin Components
 import { AdminDashboard } from './pages/admin/Dashboard';
@@ -15,7 +15,7 @@ import { UserManagement } from './components/admin/UserManagement/UserManagement
 import { RateCardManagement } from './components/admin/RateCard/RateCardManagement';
 
 // Client Components
-import { ClientDashboard } from './pages/client/Dashboard';
+import { CustomerDashboard as ClientDashboard } from './pages/client/Dashboard';
 import { QuoteForm } from './components/client/QuoteForm/QuoteForm';
 import { QuoteList } from './components/client/QuoteList/QuoteList';
 
@@ -32,14 +32,46 @@ const queryClient = new QueryClient({
       retry: 1,
       refetchOnWindowFocus: false,
       staleTime: 5 * 60 * 1000, // 5 minutes
+      // Add global error handling for queries
+      onError: (error) => {
+        console.error('Query error:', error);
+        // You could add global error handling here
+      }
     },
     mutations: {
       retry: 1,
+      // Add global error handling for mutations
+      onError: (error) => {
+        console.error('Mutation error:', error);
+        // You could add global error handling here
+      }
     },
   },
 });
 
 const App: React.FC = () => {
+  // Initialize performance monitoring
+  useEffect(() => {
+    // Start monitoring web vitals
+    monitorWebVitals();
+
+    // Log initial page load time
+    if (window.performance && window.performance.getEntriesByType) {
+      const navigationEntries = window.performance.getEntriesByType('navigation');
+      if (navigationEntries.length > 0) {
+        const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
+        const pageLoadTime = navigationEntry.loadEventEnd - navigationEntry.startTime;
+        console.log(`Page load time: ${pageLoadTime.toFixed(2)}ms`);
+      }
+    }
+
+    // Clean up performance marks and measures on unmount
+    return () => {
+      performance.clearMarks();
+      performance.clearMeasures();
+    };
+  }, []);
+
   return (
     <ErrorBoundary>
       <QueryClientProvider client={queryClient}>
@@ -124,7 +156,6 @@ const App: React.FC = () => {
             </Routes>
           </BrowserRouter>
         </AuthProvider>
-        <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </ErrorBoundary>
   );

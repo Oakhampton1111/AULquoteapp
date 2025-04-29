@@ -1,28 +1,118 @@
-import axios from 'axios';
+import apiClient from './client';
 import { RateCard } from '../../types/rateCard';
+import { handleApiError } from '../../utils/errorHandling';
+import { notification } from 'antd';
 
-const API_URL = import.meta.env.VITE_API_URL;
-
-export const fetchRateCards = async () => {
-  const { data } = await axios.get<RateCard[]>(`${API_URL}/api/rate-cards`);
-  return data;
+/**
+ * Fetch all rate cards
+ * @returns A promise that resolves to an array of rate cards
+ */
+export const fetchRateCards = async (): Promise<RateCard[]> => {
+  try {
+    const response = await apiClient.get('/rate-cards');
+    return response.data;
+  } catch (error) {
+    const errorMessage = handleApiError(error, 'Failed to fetch rate cards', false);
+    notification.error({
+      message: 'Error Fetching Rate Cards',
+      description: errorMessage,
+    });
+    throw error;
+  }
 };
 
-export const fetchRateCardById = async (id: string) => {
-  const { data } = await axios.get<RateCard>(`${API_URL}/api/rate-cards/${id}`);
-  return data;
+/**
+ * Fetch a single rate card by ID
+ * @param id The ID of the rate card to fetch
+ * @returns A promise that resolves to the rate card
+ */
+export const fetchRateCardById = async (id: string): Promise<RateCard> => {
+  try {
+    const response = await apiClient.get(`/rate-cards/${id}`);
+    return response.data;
+  } catch (error) {
+    const errorMessage = handleApiError(error, `Failed to fetch rate card #${id}`, false);
+    notification.error({
+      message: 'Error Fetching Rate Card',
+      description: errorMessage,
+    });
+    throw error;
+  }
 };
 
-export const createRateCard = async (rateCard: Omit<RateCard, 'id'>) => {
-  const { data } = await axios.post<RateCard>(`${API_URL}/api/rate-cards`, rateCard);
-  return data;
+/**
+ * Create a new rate card
+ * @param rateCard The data for the new rate card
+ * @returns A promise that resolves to the created rate card
+ */
+export const createRateCard = async (rateCard: Omit<RateCard, 'id'>): Promise<RateCard> => {
+  try {
+    const response = await apiClient.post('/rate-cards', rateCard);
+
+    // Show success notification
+    notification.success({
+      message: 'Rate Card Created',
+      description: `Rate card "${rateCard.name}" has been created successfully.`,
+    });
+
+    return response.data;
+  } catch (error) {
+    const errorMessage = handleApiError(error, 'Failed to create rate card', false);
+    notification.error({
+      message: 'Error Creating Rate Card',
+      description: errorMessage,
+    });
+    throw error;
+  }
 };
 
-export const updateRateCard = async (id: string, rateCard: Partial<RateCard>) => {
-  const { data } = await axios.patch<RateCard>(`${API_URL}/api/rate-cards/${id}`, rateCard);
-  return data;
+/**
+ * Update an existing rate card
+ * @param id The ID of the rate card to update
+ * @param rateCard The updated data for the rate card
+ * @returns A promise that resolves to the updated rate card
+ */
+export const updateRateCard = async (id: string, rateCard: Partial<RateCard>): Promise<RateCard> => {
+  try {
+    const response = await apiClient.patch(`/rate-cards/${id}`, rateCard);
+
+    // Show success notification
+    notification.success({
+      message: 'Rate Card Updated',
+      description: `Rate card #${id} has been updated successfully.`,
+    });
+
+    return response.data;
+  } catch (error) {
+    const errorMessage = handleApiError(error, `Failed to update rate card #${id}`, false);
+    notification.error({
+      message: 'Error Updating Rate Card',
+      description: errorMessage,
+    });
+    throw error;
+  }
 };
 
-export const deleteRateCard = async (id: string) => {
-  await axios.delete(`${API_URL}/api/rate-cards/${id}`);
+/**
+ * Delete a rate card
+ * @param id The ID of the rate card to delete
+ * @returns A promise that resolves when the rate card is deleted
+ */
+export const deleteRateCard = async (id: string): Promise<void> => {
+  try {
+    await apiClient.delete(`/rate-cards/${id}`);
+
+    // Show success notification
+    notification.success({
+      message: 'Rate Card Deleted',
+      description: `Rate card #${id} has been deleted successfully.`,
+    });
+  } catch (error) {
+    const errorMessage = handleApiError(error, `Failed to delete rate card #${id}`, false);
+    notification.error({
+      message: 'Error Deleting Rate Card',
+      description: errorMessage,
+    });
+    throw error;
+  }
 };
