@@ -135,8 +135,13 @@ class AuthService:
             return False
 
         token_hash = hashlib.sha256(token.encode()).hexdigest()
-        await self.redis.setex(f"{REVOCATION_PREFIX}{token_hash}", ttl, "1")
-        return True
+        token_hash = hashlib.sha256(token.encode()).hexdigest()
+        try:
+            await self.redis.setex(f"{REVOCATION_PREFIX}{token_hash}", ttl, "1")
+            return True # Token successfully added to blacklist
+        except redis.RedisError as e:
+            # logger.error(f"Redis error during token revocation for {token_hash}: {e}") # Consider logging
+            return False # Indicate revocation failed due to Redis issue
 
     async def verify_token(self, token: str) -> Optional[TokenData]:
         """Verify an access token."""
