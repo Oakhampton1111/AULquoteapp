@@ -111,7 +111,7 @@ class AuthService:
     async def revoke_token(self, token: str) -> bool:
         """Revoke an access token."""
         try:
-            payload = decode_access_token(token)
+            payload = await run_in_threadpool(decode_access_token, token)
         except JWTError:
             return False
 
