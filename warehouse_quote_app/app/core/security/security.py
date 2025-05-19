@@ -27,8 +27,11 @@ def generate_secure_token(length: int = 32) -> str:
 
 def validate_api_key(api_key: str) -> bool:
     """Validate an API key."""
-    # TODO: Implement proper API key validation
-    return api_key == settings.SECRET_KEY
+    if not api_key:
+        return False
+
+    valid_keys = settings.API_KEYS or [settings.SECRET_KEY]
+    return api_key in valid_keys
 
 class CustomHTTPBearer(HTTPBearer):
     """Custom HTTP Bearer authentication."""

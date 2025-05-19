@@ -76,6 +76,14 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
     REFRESH_TOKEN_EXPIRE_DAYS: int = 7
     ALGORITHM: str = "HS256"
+    API_KEYS: List[str] = []
+
+    @field_validator("API_KEYS", mode="before")
+    def assemble_api_keys(cls, v: Union[str, List[str]]) -> List[str]:
+        """Parse API keys from environment variable."""
+        if isinstance(v, str):
+            return [i.strip() for i in v.split(",") if i.strip()]
+        return v or []
     
     # Email Settings
     SMTP_TLS: bool = True
