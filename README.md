@@ -586,7 +586,7 @@ The project includes a centralized development toolset:
    .\run.ps1 build
    ```
 
-For detailed development documentation, see [Development Tools Guide](deployment/scripts/README.md).
+For detailed development documentation, see [Development Tools Guide](deployment/scripts/dev/README.md).
 
 ## Development Scripts
 
