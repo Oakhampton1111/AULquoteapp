@@ -92,6 +92,9 @@ class TestCustomerExperience(unittest.TestCase):
         
         # Verify welcome email was sent
         mock_send_email.assert_called_once()
+        call_kwargs = mock_send_email.call_args.kwargs
+        self.assertEqual(call_kwargs.get("email_to"), [self.test_user_data["email"]])
+        self.assertEqual(call_kwargs.get("subject"), "Welcome to AUL Quote App")
         
         # Step 2: Login with the new customer
         logger.info("Testing customer login")
