@@ -141,9 +141,16 @@ class AuthService:
     async def verify_token(self, token: str) -> Optional[TokenData]:
         """Verify an access token."""
         try:
-            token_hash = hashlib.sha256(token.encode()).hexdigest()
-            if await self.redis.get(f"{REVOCATION_PREFIX}{token_hash}"):
-                return None
+            try:
+                token_hash = hashlib.sha256(token.encode()).hexdigest()
+                # Check if the token is in the Redis blacklist
+                if await self.redis.get(f"{REVOCATION_PREFIX}{token_hash}"):
+                    return None # Token is revoked
+            except redis.RedisError as e:
+                # logger.error(f"Redis error during token verification for {token_hash}: {e}") # Consider logging
+                # Fail-closed: If Redis is inaccessible, we cannot confirm the token is NOT revoked.
+                return None 
+
 
             payload = decode_access_token(token)
             username = payload.get("sub")
