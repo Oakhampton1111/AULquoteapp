@@ -28,7 +28,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
   mode = 'create',
 }) => {
   const [form] = Form.useForm();
-  const { data: rateCards, isLoading: isLoadingRateCards } = useRateCards();
+  const { rateCards, isLoading: isLoadingRateCards } = useRateCards();
   const { data: customers, isLoading: isLoadingCustomers } = useCustomers();
 
   const handleSubmit = (values: any) => {
