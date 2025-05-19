@@ -47,9 +47,13 @@ class Quote(AsyncAttrs, StatusTrackingMixin, BaseModel):
     accepted_by: Mapped[Optional[int]] = mapped_column(ForeignKey("user.id"), nullable=True)
     rejected_by: Mapped[Optional[int]] = mapped_column(ForeignKey("user.id"), nullable=True)
     completed_by: Mapped[Optional[int]] = mapped_column(ForeignKey("user.id"), nullable=True)
+
+    # Deal association
+    deal_id: Mapped[Optional[int]] = mapped_column(ForeignKey("deal.id"), nullable=True)
     
     # Relationships
     customer: Mapped["Customer"] = relationship(back_populates="quotes")
+    deal: Mapped["Deal"] = relationship(back_populates="quotes")
     creator: Mapped["User"] = relationship(foreign_keys=[created_by], back_populates="created_quotes")
     acceptor: Mapped[Optional["User"]] = relationship(foreign_keys=[accepted_by], back_populates="accepted_quotes")
     rejector: Mapped[Optional["User"]] = relationship(foreign_keys=[rejected_by], back_populates="rejected_quotes")
