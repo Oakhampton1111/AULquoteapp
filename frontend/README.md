@@ -96,7 +96,7 @@ npm run build:prod
 
 The application uses the following environment variables:
 
-- `VITE_API_URL`: The URL of the API server
+- `VITE_API_URL`: Base URL of the API server (used by `src/api/client.ts`)
 - `VITE_APP_NAME`: The name of the application
 - `VITE_APP_VERSION`: The version of the application
 - `VITE_USE_MOCKS`: Whether to use mock data (true/false)
@@ -475,7 +475,7 @@ The authentication system has been enhanced with:
 Create a `.env.local` file:
 
 ```env
-VITE_API_URL=http://localhost:8000
+VITE_API_URL=http://localhost:8000   # Backend base URL
 VITE_APP_NAME=AUL Quote App
 ```
 
