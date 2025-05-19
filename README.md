@@ -517,6 +517,7 @@ Comprehensive documentation is available in the `docs` directory:
 - [CONFIGURATION.md](./docs/CONFIGURATION.md) - Configuration structure and management
 - [DEVELOPMENT.md](./docs/DEVELOPMENT.md) - Development setup and guidelines
 - [TYPE_SAFETY.md](./docs/TYPE_SAFETY.md) - Type safety practices and guidelines
+- [AUTH.md](./docs/auth.md) - Authentication system and token blacklist
 
 ## Code Cleanup Initiative
 

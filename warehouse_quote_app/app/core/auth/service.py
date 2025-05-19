@@ -7,6 +7,10 @@ from typing import Optional
 from fastapi import Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from jose import JWTError
+import hashlib
+import redis.asyncio as redis
+
+REVOCATION_PREFIX = "revoked_token:"
 
 from app.core.config import settings
 from app.core.database import get_db
@@ -20,6 +24,7 @@ class AuthService:
 
     def __init__(self, db: Session = Depends(get_db)):
         self.db = db
+        self.redis = redis.from_url(settings.redis_url)
 
     async def authenticate_user(self, username: str, password: str) -> Optional[User]:
         """Authenticate a user by username and password."""
@@ -105,7 +110,21 @@ class AuthService:
 
     async def revoke_token(self, token: str) -> bool:
         """Revoke an access token."""
-        # TODO: Implement token blacklist using Redis
+        try:
+            payload = await run_in_threadpool(decode_access_token, token)
+        except JWTError:
+            return False
+
+        exp = payload.get("exp")
+        if not exp:
+            return False
+
+        ttl = exp - int(datetime.utcnow().timestamp())
+        if ttl <= 0:
+            return False
+
+        token_hash = hashlib.sha256(token.encode()).hexdigest()
+        await self.redis.setex(f"{REVOCATION_PREFIX}{token_hash}", ttl, "1")
         return True
 
     async def verify_token(self, token: str) -> Optional[TokenData]:
