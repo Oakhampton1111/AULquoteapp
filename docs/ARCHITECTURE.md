@@ -757,6 +757,7 @@ Rate-related endpoints are consolidated under `/api/v1/rate-cards/`:
 - Role-based access control
 - Secure password handling
 - Session management
+- Token blacklist stored in Redis for revoked JWTs (hashed token values)
 - OAuth integration (planned)
 
 ### 3. Quote Management

@@ -7,6 +7,11 @@ from typing import Optional
 from fastapi import Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from jose import JWTError
+import hashlib
+import redis.asyncio as redis
+from fastapi.concurrency import run_in_threadpool
+
+REVOCATION_PREFIX = "revoked_token:"
 
 from app.core.config import settings
 from app.core.database import get_db
@@ -20,10 +25,17 @@ class AuthService:
 
     def __init__(self, db: Session = Depends(get_db)):
         self.db = db
+        self.redis = redis.from_url(settings.redis_url)
+
+    async def _run(self, func, *args, **kwargs):
+        """Run blocking database operations in a thread pool."""
+        return await run_in_threadpool(func, *args, **kwargs)
 
     async def authenticate_user(self, username: str, password: str) -> Optional[User]:
         """Authenticate a user by username and password."""
-        user = self.db.query(User).filter(User.username == username).first()
+        user = await self._run(
+            lambda: self.db.query(User).filter(User.username == username).first()
+        )
         if not user or not verify_password(password, user.hashed_password):
             return None
         return user
@@ -37,9 +49,9 @@ class AuthService:
             hashed_password=hashed_password,
             is_admin=is_admin
         )
-        self.db.add(user)
-        self.db.commit()
-        self.db.refresh(user)
+        await self._run(self.db.add, user)
+        await self._run(self.db.commit)
+        await self._run(self.db.refresh, user)
         return user
 
     async def get_login_token(self, username: str, password: str) -> Token:
@@ -63,14 +75,16 @@ class AuthService:
         """Change user password."""
         if not verify_password(current_password, user.hashed_password):
             return False
-        
+
         user.hashed_password = get_password_hash(new_password)
-        self.db.commit()
+        await self._run(self.db.commit)
         return True
 
     async def request_password_reset(self, email: str) -> Optional[str]:
         """Request password reset for user."""
-        user = self.db.query(User).filter(User.email == email).first()
+        user = await self._run(
+            lambda: self.db.query(User).filter(User.email == email).first()
+        )
         if not user:
             return None
         
@@ -87,17 +101,19 @@ class AuthService:
             payload = decode_access_token(token)
             if payload.get("type") != "reset":
                 return False
-            
+
             username = payload.get("sub")
             if not username:
                 return False
-            
-            user = self.db.query(User).filter(User.username == username).first()
+
+            user = await self._run(
+                lambda: self.db.query(User).filter(User.username == username).first()
+            )
             if not user:
                 return False
-            
+
             user.hashed_password = get_password_hash(new_password)
-            self.db.commit()
+            await self._run(self.db.commit)
             return True
             
         except JWTError:
@@ -105,12 +121,30 @@ class AuthService:
 
     async def revoke_token(self, token: str) -> bool:
         """Revoke an access token."""
-        # TODO: Implement token blacklist using Redis
+        try:
+            payload = decode_access_token(token)
+        except JWTError:
+            return False
+
+        exp = payload.get("exp")
+        if not exp:
+            return False
+
+        ttl = exp - int(datetime.utcnow().timestamp())
+        if ttl <= 0:
+            return False
+
+        token_hash = hashlib.sha256(token.encode()).hexdigest()
+        await self.redis.setex(f"{REVOCATION_PREFIX}{token_hash}", ttl, "1")
         return True
 
     async def verify_token(self, token: str) -> Optional[TokenData]:
         """Verify an access token."""
         try:
+            token_hash = hashlib.sha256(token.encode()).hexdigest()
+            if await self.redis.get(f"{REVOCATION_PREFIX}{token_hash}"):
+                return None
+
             payload = decode_access_token(token)
             username = payload.get("sub")
             if not username:
