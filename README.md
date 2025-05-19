@@ -623,6 +623,11 @@ Use the script runner:
 .\run.ps1 -ScriptName create-rates
 ```
 
+### Archived Scripts
+
+Deprecated or unused scripts are moved to the `archive/` directory. Scripts in
+this folder are kept for historical reference and are not maintained.
+
 ## Build System
 
 The project uses a monorepo structure with centralized build configuration:
