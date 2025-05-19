@@ -54,7 +54,7 @@ jobs:
     strategy:
       matrix:
         python-version:
-        - 3.11
+        - 3.9
   comprehensive-tests:
     runs-on: ubuntu-latest
     services:
