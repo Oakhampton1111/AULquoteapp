@@ -46,10 +46,7 @@ class ConversationContext:
         elif self.state == 'duration':
             return self._handle_duration_input(user_input)
         else:
-            return ConversationResponse(
-                messages=["I'm not sure how to proceed. Let's start over."],
-                suggested_responses=["Start over"]
-            )
+            return self._create_error_response()
     
     def _handle_initial_input(self, user_input: str) -> ConversationResponse:
         """Handle initial user request."""
@@ -121,7 +118,7 @@ class ConversationContext:
         # Map duration input to weeks
         if 'short' in user_input or '1-3' in user_input:
             self.gathered_info['duration_weeks'] = 2
-        elif 'medium' in user_input or '1-6' in user_input:
+        elif 'medium' in user_input or '3-6' in user_input:
             self.gathered_info['duration_weeks'] = 6
         elif 'long' in user_input or '6+' in user_input:
             self.gathered_info['duration_weeks'] = 12
