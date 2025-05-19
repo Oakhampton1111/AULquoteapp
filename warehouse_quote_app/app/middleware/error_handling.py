@@ -8,7 +8,7 @@ from starlette.middleware.base import BaseHTTPMiddleware
 from sqlalchemy.exc import SQLAlchemyError
 from jwt.exceptions import PyJWTError
 
-from app.core.exceptions import (
+from warehouse_quote_app.app.core.exceptions import (
     AppError,
     AuthenticationError,
     AuthorizationError,

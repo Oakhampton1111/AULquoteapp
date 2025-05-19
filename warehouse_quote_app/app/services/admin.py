@@ -7,11 +7,11 @@ from datetime import datetime, timedelta
 from fastapi import Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
-from app.database import get_db
-from app.models.user import User
-from app.models.customer import Customer
-from app.models.quote import Quote
-from app.schemas.admin import (
+from warehouse_quote_app.app.database import get_db
+from warehouse_quote_app.app.models.user import User
+from warehouse_quote_app.app.models.customer import Customer
+from warehouse_quote_app.app.models.quote import Quote
+from warehouse_quote_app.app.schemas.admin import (
     AdminMetricsResponse,
     CustomerResponse,
     QuoteResponse,
@@ -20,10 +20,10 @@ from app.schemas.admin import (
     UserManagement,
     AuditLog
 )
-from app.schemas.reports.quote_report import QuoteReport
-from app.schemas.reports.service_report import ServiceReport
-from app.schemas.reports.customer_report import CustomerReport
-from app.core.auth import get_current_admin_user
+from warehouse_quote_app.app.schemas.reports.quote_report import QuoteReport
+from warehouse_quote_app.app.schemas.reports.service_report import ServiceReport
+from warehouse_quote_app.app.schemas.reports.customer_report import CustomerReport
+from warehouse_quote_app.app.core.auth import get_current_admin_user
 
 
 class AdminService:

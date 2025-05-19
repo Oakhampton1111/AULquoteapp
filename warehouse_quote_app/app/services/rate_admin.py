@@ -9,7 +9,7 @@ from sqlalchemy.orm import Session
 
 # Fix the import path to use the full module path
 from warehouse_quote_app.app.database.db import get_db
-from app.schemas.admin import (
+from warehouse_quote_app.app.schemas.admin import (
     RateCardResponse,
     RateCardCreate,
     RateCardUpdate

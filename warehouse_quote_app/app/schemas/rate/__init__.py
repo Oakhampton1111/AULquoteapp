@@ -49,7 +49,7 @@ class RateFilter(BaseModel):
 
 # Import enums from the correct location
 try:
-    from app.models.types import RateCategory, RateType
+    from warehouse_quote_app.app.models.types import RateCategory, RateType
 except ImportError:
     # Define fallback enums if the types module doesn't exist
     from enum import Enum, auto

@@ -4,7 +4,7 @@ from typing import Dict, Optional
 from datetime import datetime
 from pydantic import Field
 
-from app.schemas.reports.base import (
+from warehouse_quote_app.app.schemas.reports.base import (
     BaseReport,
     BaseMetrics,
     TimeMetrics,

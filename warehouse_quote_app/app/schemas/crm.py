@@ -3,7 +3,7 @@ from datetime import datetime
 from typing import Optional, List, Dict, Any
 from pydantic import BaseModel, Field, ConfigDict
 
-from app.models.crm import InteractionType, DealStage
+from warehouse_quote_app.app.models.crm import InteractionType, DealStage
 
 class InteractionBase(BaseModel):
     """Base schema for customer interactions."""

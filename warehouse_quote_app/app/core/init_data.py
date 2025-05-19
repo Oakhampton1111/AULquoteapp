@@ -1,10 +1,10 @@
 """Initial data creation for the application."""
 
 from sqlalchemy.ext.asyncio import AsyncSession
-from app.core.security import get_password_hash
-from app.models.user import User
-from app.models.rate_card import RateCard, RateCardSettings
-from app.core.config import settings
+from warehouse_quote_app.app.core.security import get_password_hash
+from warehouse_quote_app.app.models.user import User
+from warehouse_quote_app.app.models.rate_card import RateCard, RateCardSettings
+from warehouse_quote_app.app.core.config import settings
 
 async def create_initial_data(db: AsyncSession) -> None:
     """Create initial data in database."""

@@ -7,14 +7,14 @@ from sqlalchemy.orm import Session
 from typing import Dict, Any
 from decimal import Decimal
 
-from app.database import get_db
-from app.schemas.conversation import (
+from warehouse_quote_app.app.database import get_db
+from warehouse_quote_app.app.schemas.conversation import (
     ChatSession,
     MessageCreate,
     MessageResponse,
     QuoteUpdate
 )
-from app.services.llm.chat_service import ChatService
+from warehouse_quote_app.app.services.llm.chat_service import ChatService
 
 router = APIRouter(prefix="/api/v1/chat", tags=["chat"])
 chat_service = ChatService()

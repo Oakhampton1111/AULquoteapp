@@ -5,11 +5,11 @@ from sqlalchemy import and_, or_, func, case
 from sqlalchemy.orm import Session
 from sqlalchemy.future import select
 
-from app.models.customer import Customer
-from app.models.crm import CustomerInteraction, Deal, InteractionType, DealStage
-from app.services.base import BaseService
-from app.core.security import get_current_user
-from app.schemas.crm import (
+from warehouse_quote_app.app.models.customer import Customer
+from warehouse_quote_app.app.models.crm import CustomerInteraction, Deal, InteractionType, DealStage
+from warehouse_quote_app.app.services.base import BaseService
+from warehouse_quote_app.app.core.security import get_current_user
+from warehouse_quote_app.app.schemas.crm import (
     InteractionCreate,
     InteractionUpdate,
     DealCreate,

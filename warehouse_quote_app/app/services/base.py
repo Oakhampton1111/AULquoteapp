@@ -3,7 +3,7 @@
 from sqlalchemy.orm import Session
 from typing import Any, Generic, TypeVar, Optional, Type, List, Dict
 from pydantic import BaseModel
-from app.models.base import Base
+from warehouse_quote_app.app.models.base import Base
 
 ModelType = TypeVar("ModelType", bound=Base)
 CreateSchemaType = TypeVar("CreateSchemaType", bound=BaseModel)
