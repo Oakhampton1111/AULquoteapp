@@ -330,7 +330,7 @@ deployment/config/
 └── shared/        # Shared configuration
     ├── ai.env     # AI/LLM configuration
     ├── db.env     # Database configuration
-    └── rag.env    # RAG system configuration
+    └── context.env    # LLM context configuration
 ```
 
 #### Configuration Architecture
@@ -488,10 +488,10 @@ The LLM integration layer provides AI capabilities:
    - Prompt management
    - Response processing
 
-2. RAG Service (`llm/rag.py`):
-   - Document retrieval
-   - Context management
-   - Knowledge base integration
+2. Context Service (`llm/rag.py`):
+   - Loads a small knowledge base
+   - Performs lightweight keyword search
+   - Injects snippets into the LLM prompt
 
 3. Rate Integration (`llm/rate_integration.py`):
    - Rate optimization suggestions
@@ -676,7 +676,7 @@ Rate-related endpoints are consolidated under `/api/v1/rate-cards/`:
     *   Rate Optimization Service: Integrates LLMs with rate management.
     *   Chat Endpoints: Used to process chat messages for quote generation.
 *   **Data Flow:**
-    *   The Rate Integration Service interacts with the WarehouseLLM, RAGService, and CRUDRateCard to optimize rates.
+    *   The Rate Integration Service interacts with the WarehouseLLM, Context Service, and CRUDRateCard to optimize rates.
     *   Chat messages are processed by the AI models to generate quotes and update existing quotes.
 
 ## Security Architecture
@@ -778,7 +778,7 @@ Rate-related endpoints are consolidated under `/api/v1/rate-cards/`:
 ### 5. AI Integration
 ## AI Integration Component
 
-This component integrates AI capabilities into the quote generation process. It leverages LLMs for understanding user requests, extracting relevant information, and optimizing rates. It also uses Retrieval Augmented Generation (RAG) to provide context to the LLMs.
+This component integrates AI capabilities into the quote generation process. It leverages LLMs for understanding user requests, extracting relevant information, and optimizing rates. Context is provided to the LLM via a lightweight Model Context Protocol (MCP) rather than a full vector database.
 
 ### Subcomponents
 
@@ -788,18 +788,18 @@ This component integrates AI capabilities into the quote generation process. It 
 *   **LLM Model:** Provides an interface to the FLAN-T5 model for warehouse quote processing.
     *   Dependencies: transformers, torch
     *   Key files: `services/llm/model.py`
-*   **RAG Service:** Implements Retrieval Augmented Generation for warehouse quotes.
-    *   Dependencies: faiss, sentence_transformers, numpy
+*   **Context Service:** Supplies relevant snippets to the model.
+    *   Dependencies: none (built-in keyword search)
     *   Key files: `services/llm/rag.py`
 *   **Rate Integration Service:** Integrates LLMs with rate management.
-    *   Dependencies: RateService, WarehouseLLM, RAGService, CRUDRateCard
+    *   Dependencies: RateService, WarehouseLLM, Context Service, CRUDRateCard
     *   Key files: `services/llm/rate_integration.py`
 
 ### Workflow
 
 1.  The Chat Service receives a user request.
 2.  The Chat Service uses the LLM Model to understand the request and extract relevant information.
-3.  The Chat Service uses the RAG Service to retrieve relevant context from the knowledge base.
+3.  The Chat Service uses the Context Service to inject relevant knowledge snippets into the model prompt.
 4.  The Rate Integration Service uses the extracted information and context to calculate rates.
 5.  The Rate Integration Service uses the LLM Model to optimize the rates.
 6.  The Chat Service returns the quote to the user.

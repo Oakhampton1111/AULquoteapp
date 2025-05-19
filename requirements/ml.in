@@ -5,5 +5,3 @@ accelerate
 sentencepiece
 einops
 langchain
-faiss-cpu
-sentence-transformers
