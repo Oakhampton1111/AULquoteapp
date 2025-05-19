@@ -251,7 +251,7 @@ See [ARCHITECTURE.md](./docs/ARCHITECTURE.md) for system design and dependencies
 ## Development Setup
 
 ### Prerequisites
-- Python 3.11+
+- Python 3.9+
 - Node.js 18+
 - PostgreSQL 15+
 - Redis (optional, for caching)
