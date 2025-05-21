@@ -4,8 +4,9 @@ User repository for database operations.
 
 from typing import List, Optional, Dict, Any
 from datetime import datetime
-from sqlalchemy.orm import Session
-from sqlalchemy import select, func
+from sqlalchemy.ext.asyncio import AsyncSession # Changed import
+from sqlalchemy.future import select # Ensure this is used for new style queries
+from sqlalchemy import func # Keep for things like count
 
 from warehouse_quote_app.app.models.user import User
 from warehouse_quote_app.app.schemas.user import UserCreate, UserUpdate
@@ -14,62 +15,66 @@ from warehouse_quote_app.app.repositories.base import BaseRepository
 class UserRepository(BaseRepository[User, UserCreate, UserUpdate]):
     """Repository for user-related database operations."""
 
-    def get_by_email(
+    async def get_by_email( # Changed to async
         self,
-        db: Session,
+        db: AsyncSession, # Changed to AsyncSession
         email: str
     ) -> Optional[User]:
         """Get a user by email."""
-        return db.query(self.model).filter(self.model.email == email).first()
+        result = await db.execute(select(self.model).filter(self.model.email == email))
+        return result.scalars().first()
 
-    def get_by_username(
+    async def get_by_username( # Changed to async
         self,
-        db: Session,
+        db: AsyncSession, # Changed to AsyncSession
         username: str
     ) -> Optional[User]:
         """Get a user by username."""
-        return db.query(self.model).filter(self.model.username == username).first()
+        result = await db.execute(select(self.model).filter(self.model.username == username))
+        return result.scalars().first()
 
-    def get_active_users(
+    async def get_active_users( # Changed to async
         self,
-        db: Session,
+        db: AsyncSession, # Changed to AsyncSession
         skip: int = 0,
         limit: int = 100
     ) -> List[User]:
         """Get active users."""
-        return (
-            db.query(self.model)
+        result = await db.execute(
+            select(self.model)
             .filter(self.model.is_active == True)
             .offset(skip)
             .limit(limit)
-            .all()
         )
+        return result.scalars().all()
 
-    def get_admin_users(
+    async def get_admin_users( # Changed to async
         self,
-        db: Session
+        db: AsyncSession # Changed to AsyncSession
     ) -> List[User]:
         """Get admin users."""
-        return db.query(self.model).filter(self.model.is_admin == True).all()
+        result = await db.execute(select(self.model).filter(self.model.is_admin == True))
+        return result.scalars().all()
 
-    def authenticate(
+    async def authenticate( # Changed to async
         self,
-        db: Session,
+        db: AsyncSession, # Changed to AsyncSession
         *,
         email: str,
         password: str
     ) -> Optional[User]:
         """Authenticate a user by email and password."""
-        user = self.get_by_email(db, email=email)
+        user = await self.get_by_email(db, email=email) # Await the call
         if not user:
             return None
-        if not user.verify_password(password):
+        # verify_password is CPU bound, no await needed unless it becomes async itself (unlikely)
+        if not user.verify_password(password): 
             return None
         return user
 
-    def create(
+    async def create( # Changed to async
         self,
-        db: Session,
+        db: AsyncSession, # Changed to AsyncSession
         *,
         obj_in: UserCreate
     ) -> User:
@@ -79,30 +84,39 @@ class UserRepository(BaseRepository[User, UserCreate, UserUpdate]):
             username=obj_in.username if obj_in.username else obj_in.email,
             first_name=obj_in.first_name,
             last_name=obj_in.last_name,
-            is_active=obj_in.is_active,
+            is_active=obj_in.is_active, # Default to True from UserCreate schema if not provided
             is_admin=obj_in.is_admin,
             company_name=obj_in.company_name,
             phone=obj_in.phone
         )
-        db_obj.set_password(obj_in.password)
+        # set_password is CPU bound, no await needed
+        db_obj.set_password(obj_in.password) 
         db.add(db_obj)
-        db.commit()
-        db.refresh(db_obj)
+        await db.commit()
+        await db.refresh(db_obj)
         return db_obj
 
-    def update_password(
+    async def update_password( # Changed to async
         self,
-        db: Session,
+        db: AsyncSession, # Changed to AsyncSession
         *,
         user_id: int,
         new_password: str
     ) -> Optional[User]:
         """Update a user's password."""
-        user = self.get(db, id=user_id)
+        # Assuming self.get is also async now or needs to be called from an async context
+        user = await self.get(db, id=user_id) # If self.get is from BaseRepository, it also needs to be async
         if not user:
             return None
-        user.set_password(new_password)
-        db.add(user)
-        db.commit()
-        db.refresh(user)
+        user.set_password(new_password) # CPU bound
+        db.add(user) # Not async
+        await db.commit()
+        await db.refresh(user)
         return user
+
+    # BaseRepository.get and other methods (like update, remove) would also need to be async.
+    # For this task, focusing on methods directly used or easily inferred.
+    # Example for BaseRepository.get:
+    async def get(self, db: AsyncSession, id: Any) -> Optional[User]:
+        result = await db.execute(select(self.model).filter(self.model.id == id))
+        return result.scalars().first()

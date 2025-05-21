@@ -123,6 +123,22 @@ class Settings(BaseSettings):
     # Celery Settings
     CELERY_BROKER_URL: str = "redis://localhost:6379/0"
     CELERY_RESULT_BACKEND: str = "redis://localhost:6379/0"
+
+    # OIDC Provider Settings
+    # Example format for environment variable:
+    # OIDC_PROVIDERS='[{"provider_name": "google", "client_id": "xxx", "client_secret": "yyy", "server_metadata_url": "https://accounts.google.com/.well-known/openid-configuration"}]'
+    OIDC_PROVIDERS: List[Dict[str, str]] = []
+
+    @field_validator("OIDC_PROVIDERS", mode="before")
+    def assemble_oidc_providers(cls, v: Union[str, List[Dict[str, str]]]) -> List[Dict[str, str]]:
+        """Parse OIDC providers from JSON string if provided as string."""
+        if isinstance(v, str):
+            try:
+                import json
+                return json.loads(v)
+            except json.JSONDecodeError:
+                raise ValueError("OIDC_PROVIDERS string is not valid JSON")
+        return v
     
     @property
     def database_url(self) -> str:

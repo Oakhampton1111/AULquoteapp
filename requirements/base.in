@@ -18,6 +18,7 @@ annotated-types
 # API and Security
 fastapi-utils
 dependency-injector
+Authlib
 
 # Monitoring and Logging
 sentry-sdk
