@@ -18,6 +18,9 @@ class ReportingService:
         return {"total": 0, "breakdown": {}}
 
 
-def get_reporting_service(db: Session) -> ReportingService:
+from fastapi import Depends  # Add this import
+from warehouse_quote_app.app.database.db import get_db # Add this import
+
+def get_reporting_service(db: Session = Depends(get_db)) -> ReportingService:
     """Dependency getter."""
     return ReportingService(db)
