@@ -5,7 +5,6 @@ import {
   Col,
   Card,
   Tabs,
-  Typography,
   Badge,
   Space,
   Button,
@@ -25,13 +24,14 @@ import { useQuotes } from '../../hooks/useQuotes';
 import { useRateCards } from '../../hooks/useRateCards';
 
 const { Content } = Layout;
-const { Title } = Typography;
 const { TabPane } = Tabs;
 
 export const CustomerDashboard: React.FC = () => {
   const [showRateCard, setShowRateCard] = useState(false);
-  const { quotes, isLoading: quotesLoading } = useQuotes();
-  const { currentRateCard, isLoading: rateCardLoading } = useRateCards();
+  const { data: quotes = [], isLoading: quotesLoading } = useQuotes();
+  const { data: rateCards = [], isLoading: rateCardLoading } = useRateCards();
+  const currentRateCard =
+    rateCards.find(rc => rc.isActive) || rateCards[0];
   
   // Group quotes by status
   const quotesByStatus = {

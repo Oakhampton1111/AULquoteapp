@@ -18,6 +18,7 @@ from warehouse_quote_app.app.models.quote import QuoteStatus
 class QuoteBase(BaseModel):
     """Base quote schema."""
     customer_id: int
+    deal_id: Optional[int] = None
     total_amount: Decimal
     service_type: str
     storage_requirements: Optional[Dict[str, Any]] = None
@@ -33,6 +34,7 @@ class QuoteUpdate(BaseModel):
     total_amount: Optional[Decimal] = None
     service_type: Optional[str] = None
     status: Optional[str] = None
+    deal_id: Optional[int] = None
     storage_requirements: Optional[Dict[str, Any]] = None
     transport_services: Optional[Dict[str, Any]] = None
     special_requirements: Optional[Dict[str, Any]] = None
