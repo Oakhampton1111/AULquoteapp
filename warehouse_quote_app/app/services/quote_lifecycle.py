@@ -67,6 +67,13 @@ class QuoteLifecycleService:
             ),
             agent_id=created_by_id,
         )
+        # Persist the deal ID on the quote so later status updates can
+        # modify the correct CRM record
+        await self.db.execute(
+            update(Quote).where(Quote.id == quote.id).values(deal_id=deal.id)
+        )
+        await self.db.commit()
+        await self.db.refresh(quote)
         await crm_service.update_deal_stage(
             deal_id=deal.id, stage=DealStage.QUOTE_REQUESTED, agent_id=created_by_id
         )
@@ -127,6 +134,23 @@ class QuoteLifecycleService:
             status=status_update.status,
             rejection_reason=status_update.rejection_reason,
         )
+
+        # Update CRM deal stage based on the new quote status
+        crm_service = CRMService(self.db)
+        deal_id = updated_quote.deal_id or quote.deal_id
+        if deal_id:
+            if status_update.status == "accepted":
+                await crm_service.update_deal_stage(
+                    deal_id=deal_id,
+                    stage=DealStage.CLOSED_WON,
+                    agent_id=quote.created_by,
+                )
+            elif status_update.status == "rejected":
+                await crm_service.update_deal_stage(
+                    deal_id=deal_id,
+                    stage=DealStage.CLOSED_LOST,
+                    agent_id=quote.created_by,
+                )
 
         return await self.get_quote_response(quote_id)
 
