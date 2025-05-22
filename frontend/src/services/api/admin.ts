@@ -1,18 +1,13 @@
-import axios from 'axios';
-
-const API_URL = import.meta.env.VITE_API_URL;
+import apiClient from './apiClient';
 
 export const fetchDashboardStats = async () => {
-  const { data } = await axios.get(`${API_URL}/api/admin/dashboard/stats`);
-  return data;
+  return apiClient.get('/admin/dashboard/stats');
 };
 
 export const fetchRecentQuotes = async () => {
-  const { data } = await axios.get(`${API_URL}/api/admin/quotes/recent`);
-  return data;
+  return apiClient.get('/admin/quotes/recent');
 };
 
 export const approveQuote = async (quoteId: string) => {
-  const { data } = await axios.post(`${API_URL}/api/admin/quotes/${quoteId}/approve`);
-  return data;
+  return apiClient.post(`/admin/quotes/${quoteId}/approve`);
 };
