@@ -45,9 +45,9 @@ export const MainNav: React.FC<MainNavProps> = ({ user }) => {
 
   const items = [
     {
-      key: '/',
+      key: '/dashboard',
       icon: <HomeOutlined />,
-      label: <Link to="/">Dashboard</Link>,
+      label: <Link to="/dashboard">Dashboard</Link>,
     },
     {
       key: '/quotes',
@@ -127,7 +127,7 @@ export const MainNav: React.FC<MainNavProps> = ({ user }) => {
 
   return (
     <StyledNav>
-      <Logo to="/">AUL Quote App</Logo>
+      <Logo to="/dashboard">AUL Quote App</Logo>
       <Menu
         mode="horizontal"
         selectedKeys={[location.pathname]}
