@@ -36,4 +36,12 @@ Once both parties agree on a price:
 2. Acceptance time and user are recorded in the database.
 3. The quote status updates so downstream logistics steps can begin.
 
+## CRM Deal Updates
+
+The application keeps the CRM in sync with quote outcomes using
+`CRMService`. When a customer **accepts** a quote, the associated deal moves
+from the `QUOTE_REQUESTED` stage to `CLOSED_WON`. A **rejected** quote causes
+the deal stage to transition to `CLOSED_LOST`. These stage changes update win
+and loss metrics so the sales team can track pipeline performance accurately.
+
 This flow helps new contributors and users understand the overall experience and expected interactions within the system.
