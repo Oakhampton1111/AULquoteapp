@@ -6,16 +6,16 @@ from typing import List, Dict, Any
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
-from app.core.database import get_db
-from app.core.auth import get_current_user, get_current_admin_user
-from app.models.user import User
-from app.services.user_service import UserService
-from app.schemas.user import (
+from warehouse_quote_app.app.core.database import get_db
+from warehouse_quote_app.app.core.auth import get_current_user, get_current_admin_user
+from warehouse_quote_app.app.models.user import User
+from warehouse_quote_app.app.services.user_service import UserService
+from warehouse_quote_app.app.schemas.user import (
     User as UserSchema,
     UserCreate,
     UserUpdate
 )
-from app.schemas.user.customer import (
+from warehouse_quote_app.app.schemas.user.customer import (
     Customer as CustomerSchema,
     CustomerCreate,
     CustomerUpdate

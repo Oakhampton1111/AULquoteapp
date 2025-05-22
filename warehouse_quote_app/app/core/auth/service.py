@@ -12,10 +12,10 @@ import redis.asyncio as redis
 
 REVOCATION_PREFIX = "revoked_token:"
 
-from app.core.config import settings
-from app.core.database import get_db
-from app.models.user import User
-from app.schemas.user.auth import Token, TokenData
+from warehouse_quote_app.app.core.config import settings
+from warehouse_quote_app.app.core.database import get_db
+from warehouse_quote_app.app.models.user import User
+from warehouse_quote_app.app.schemas.user.auth import Token, TokenData
 from .jwt import create_access_token, decode_access_token
 from .dependencies import get_password_hash, verify_password
 

@@ -7,8 +7,8 @@ from sqlalchemy import Column, Integer, String, Numeric, JSON, ForeignKey, DateT
 from sqlalchemy.orm import relationship, Mapped, mapped_column
 from sqlalchemy.ext.asyncio import AsyncAttrs
 
-from app.models.base import BaseModel
-from app.models.mixins import ValidityMixin, OptimizationMixin
+from warehouse_quote_app.app.models.base import BaseModel
+from warehouse_quote_app.app.models.mixins import ValidityMixin, OptimizationMixin
 
 class Rate(AsyncAttrs, ValidityMixin, OptimizationMixin, BaseModel):
     """Rate model."""

@@ -7,7 +7,11 @@ from datetime import datetime, timedelta
 from decimal import Decimal
 from fastapi import Depends, HTTPException, status
 from sqlalchemy.orm import Session
-
+from warehouse_quote_app.app.core.config import settings
+from warehouse_quote_app.app.database import get_db
+from warehouse_quote_app.app.models.user import User
+from warehouse_quote_app.app.models.customer import Customer
+from warehouse_quote_app.app.models.quote import Quote, QuoteStatus
 from warehouse_quote_app.app.database.db import get_db
 from warehouse_quote_app.app.models.user import User
 from warehouse_quote_app.app.models.customer import Customer
@@ -22,6 +26,8 @@ from warehouse_quote_app.app.schemas.admin import (
 from warehouse_quote_app.app.schemas.reports.quote_report import QuoteReport
 from warehouse_quote_app.app.schemas.reports.service_report import ServiceReport
 from warehouse_quote_app.app.schemas.reports.customer_report import CustomerReport
+from warehouse_quote_app.app.core.auth import get_current_admin_user
+from warehouse_quote_app.app.repositories.user import UserRepository
 from warehouse_quote_app.app.repositories.customer import CustomerRepository
 from warehouse_quote_app.app.repositories.quote import QuoteRepository
 

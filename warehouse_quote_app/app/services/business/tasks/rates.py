@@ -5,10 +5,10 @@ Rate-related background tasks.
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.core.tasks.celery import celery_app
-from app.models.rate import Rate, RateCard
-from app.core.db import get_db
-from app.services.business.rates import RateService
+from warehouse_quote_app.app.core.tasks.celery import celery_app
+from warehouse_quote_app.app.models.rate import Rate, RateCard
+from warehouse_quote_app.app.core.db import get_db
+from warehouse_quote_app.app.services.business.rates import RateService
 
 @celery_app.task
 async def update_rate_cards() -> int:

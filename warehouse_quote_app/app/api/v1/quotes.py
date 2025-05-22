@@ -7,9 +7,9 @@ from sqlalchemy.orm import Session
 from typing import List, Dict, Any
 from decimal import Decimal
 
-from app.core.database import get_db
-from app.services.quote_service import QuoteService
-from app.schemas.quote import (
+from warehouse_quote_app.app.core.database import get_db
+from warehouse_quote_app.app.services.quote_service import QuoteService
+from warehouse_quote_app.app.schemas.quote import (
     MultiServiceQuoteRequest,
     ServiceRequest,
     QuoteResponse,

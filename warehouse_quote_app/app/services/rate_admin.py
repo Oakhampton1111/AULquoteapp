@@ -6,6 +6,13 @@ from sqlalchemy.orm import Session
 
 from warehouse_quote_app.app.database.db import get_db
 from warehouse_quote_app.app.models.rate import Rate
+from warehouse_quote_app.app.schemas.admin import (
+    RateCardResponse,
+    RateCardCreate,
+    RateCardUpdate
+)
+from warehouse_quote_app.app.repositories.rate import RateRepository
+from warehouse_quote_app.app.models.rate import Rate
 from warehouse_quote_app.app.schemas.rate.rate import RateCreate, RateUpdate
 from warehouse_quote_app.app.repositories.rate import RateRepository
 
@@ -41,3 +48,4 @@ class RateAdminService:
 
 def get_rate_admin_service(db: Session = Depends(get_db)) -> RateAdminService:
     return RateAdminService(db)
+
