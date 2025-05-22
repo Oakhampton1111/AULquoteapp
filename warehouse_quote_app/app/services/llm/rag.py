@@ -1,25 +1,29 @@
-"""
-RAG (Retrieval Augmented Generation) service for warehouse quotes.
+"""Context service for warehouse quotes using a simple Model Context Protocol.
+
+This implementation replaces the previous FAISS based Retrieval Augmented
+Generation (RAG) layer.  The knowledge base is small enough to fit in memory, so
+documents are loaded and searched with lightweight keyword matching.  Relevant
+snippets are then injected directly into the LLM prompt.
 """
 
 from typing import List, Dict, Optional
 import json
 from pathlib import Path
-import faiss
-from sentence_transformers import SentenceTransformer
-import numpy as np
 from datetime import datetime
 import re
 
 class RAGService:
-    def __init__(self, knowledge_base_path: Optional[str] = None):
-        self.encoder = SentenceTransformer('all-MiniLM-L6-v2')
-        self.knowledge_base_path = Path(knowledge_base_path) if knowledge_base_path else Path(__file__).parent / "knowledge"
+    """Load knowledge snippets and return relevant context."""
+
+    def __init__(self, knowledge_base_path: Optional[str] = None) -> None:
+        self.knowledge_base_path = (
+            Path(knowledge_base_path) if knowledge_base_path else Path(__file__).parent / "knowledge"
+        )
         self.rag_doc_path = Path(__file__).parent.parent.parent.parent / "rag_document.txt"
         self.load_knowledge_base()
         
     def load_knowledge_base(self):
-        """Load and index the knowledge base"""
+        """Load the knowledge base documents."""
         # Load JSON documents
         with open(self.knowledge_base_path / "warehouse_knowledge.json", "r") as f:
             self.documents = json.load(f)
@@ -40,13 +44,9 @@ class RAGService:
                 "updated_at": datetime.utcnow().isoformat()
             })
             
-        # Create FAISS index
-        self.texts = [doc["content"] for doc in self.documents["documents"]]
-        embeddings = self.encoder.encode(self.texts)
-        
-        # Initialize FAISS index
-        self.index = faiss.IndexFlatL2(embeddings.shape[1])
-        self.index.add(np.array(embeddings).astype('float32'))
+        # Precompute lowercase tokens for simple matching
+        for doc in self.documents["documents"]:
+            doc["_tokens"] = self._tokenize(doc["content"])
         
     def _parse_rag_document(self, content: str) -> List[Dict]:
         """Parse RAG document into sections"""
@@ -86,28 +86,23 @@ class RAGService:
             })
             
         return sections
+
+    def _tokenize(self, text: str) -> List[str]:
+        """Simple tokenizer that lowercases and splits on non-word characters."""
+        return re.findall(r"\w+", text.lower())
             
     def get_relevant_context(self, query: str, k: int = 3) -> List[Dict]:
-        """Retrieve relevant documents for a query"""
-        # Encode query
-        query_embedding = self.encoder.encode([query])
-        
-        # Search index
-        distances, indices = self.index.search(
-            np.array(query_embedding).astype('float32'), 
-            k
-        )
-        
-        # Return relevant documents with scores
-        results = []
-        for i, (dist, idx) in enumerate(zip(distances[0], indices[0])):
-            doc = self.documents["documents"][idx]
-            results.append({
-                **doc,
-                "relevance_score": float(1 / (1 + dist))  # Convert distance to similarity score
-            })
-            
-        return sorted(results, key=lambda x: x["relevance_score"], reverse=True)
+        """Retrieve relevant documents for a query using keyword matching."""
+        tokens = self._tokenize(query)
+
+        scored: List[Dict] = []
+        for doc in self.documents["documents"]:
+            score = sum(1 for t in tokens if t in doc.get("_tokens", []))
+            if score:
+                scored.append({**doc, "relevance_score": float(score)})
+
+        scored.sort(key=lambda d: d["relevance_score"], reverse=True)
+        return scored[:k]
         
     def get_rate_card_context(self, service_type: str, include_edge_cases: bool = True) -> List[Dict]:
         """Get relevant rate card information"""

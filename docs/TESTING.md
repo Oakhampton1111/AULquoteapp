@@ -292,7 +292,7 @@ npm test -- --coverage
 
 ### 2. AI Component Tests
 - Language model accuracy
-- RAG system retrieval
+- Context service retrieval
 - Memory management
 - Context handling
 - Rate validation

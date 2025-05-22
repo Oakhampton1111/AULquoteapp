@@ -518,6 +518,7 @@ Comprehensive documentation is available in the `docs` directory:
 - [DEVELOPMENT.md](./docs/DEVELOPMENT.md) - Development setup and guidelines
 - [TYPE_SAFETY.md](./docs/TYPE_SAFETY.md) - Type safety practices and guidelines
 - [AUTH.md](./docs/auth.md) - Authentication system and token blacklist
+- [USER_FLOW.md](./docs/USER_FLOW.md) - Overview of the user journey from registration to quote acceptance
 
 ## Code Cleanup Initiative
 
@@ -586,7 +587,7 @@ The project includes a centralized development toolset:
    .\run.ps1 build
    ```
 
-For detailed development documentation, see [Development Tools Guide](scripts/dev/README.md).
+For detailed development documentation, see [Development Tools Guide](deployment/scripts/dev/README.md).
 
 ## Development Scripts
 
@@ -1083,7 +1084,7 @@ The project includes a centralized development toolset:
    .\run.ps1 build
    ```
 
-For detailed development documentation, see [Development Tools Guide](scripts/dev/README.md).
+For detailed development documentation, see [Development Tools Guide](deployment/scripts/dev/README.md).
 
 ## Development Scripts
 

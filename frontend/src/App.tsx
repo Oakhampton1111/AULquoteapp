@@ -18,6 +18,7 @@ import { RateCardManagement } from './components/admin/RateCard/RateCardManageme
 import { CustomerDashboard as ClientDashboard } from './pages/client/Dashboard';
 import { QuoteForm } from './components/client/QuoteForm/QuoteForm';
 import { QuoteList } from './components/client/QuoteList/QuoteList';
+import { QuoteDetail } from './pages/client/QuoteDetail';
 
 // Configure global message duration
 message.config({
@@ -138,6 +139,14 @@ const App: React.FC = () => {
                   element={
                     <ProtectedRoute requiredRole="client">
                       <QuoteList />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="client/quotes/:id"
+                  element={
+                    <ProtectedRoute requiredRole="client">
+                      <QuoteDetail />
                     </ProtectedRoute>
                   }
                 />

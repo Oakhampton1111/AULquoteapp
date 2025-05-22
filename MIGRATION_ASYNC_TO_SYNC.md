@@ -2,7 +2,7 @@
 
 ## Overview
 
-The application has been refactored to use synchronous SQLAlchemy methods instead of async operations. This change simplifies the codebase and improves maintainability.
+The application has been refactored to use synchronous SQLAlchemy methods instead of async operations. This change simplifies the codebase and improves maintainability. The original async helpers are still available, so both sync and async helpers now coexist.
 
 ## Key Changes
 
@@ -38,7 +38,7 @@ The application has been refactored to use synchronous SQLAlchemy methods instea
 
 ### 4. Core Infrastructure
 
-- Updated database.py to use synchronous engine and session management
+- Updated db.py to use synchronous engine and session management
 - Modified deps.py to support synchronous database sessions
 - Refactored security.py to remove async methods
 
@@ -70,7 +70,7 @@ This migration maintains the existing repository and service structure while cha
    - `warehouse_quote_app/app/api/v1/endpoints/chat.py`
 
 4. **Core Infrastructure**
-   - `warehouse_quote_app/app/database.py`
+   - `warehouse_quote_app/app/database/db.py`
    - `warehouse_quote_app/app/api/deps.py`
    - `warehouse_quote_app/app/core/security/security.py`
 

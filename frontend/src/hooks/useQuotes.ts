@@ -42,4 +42,30 @@ export const useGenerateQuote = () => {
   });
 };
 
+export const useAcceptQuote = () => {
+  return useMutation({
+    mutationFn: async (id: number) =>
+      apiClient.post<Quote>(`/quotes/${id}/accept`),
+    onSuccess: () => {
+      apiClient.invalidateQueries(['quotes']);
+    },
+  });
+};
+
+export interface QuoteNegotiationPayload {
+  id: number;
+  discount_percentage: number;
+  reason: string;
+}
+
+export const useNegotiateQuote = () => {
+  return useMutation({
+    mutationFn: async ({ id, discount_percentage, reason }: QuoteNegotiationPayload) =>
+      apiClient.post(`/quotes/${id}/negotiate`, { discount_percentage, reason }),
+    onSuccess: () => {
+      apiClient.invalidateQueries(['quotes']);
+    },
+  });
+};
+
 export { useDeleteQuote };
