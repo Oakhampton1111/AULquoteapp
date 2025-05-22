@@ -275,3 +275,29 @@ class CRMService(BaseService):
             ))
         
         return result
+
+    async def get_customer_deals(self, customer_id: int) -> List[Deal]:
+        """Retrieve all deals for a specific customer ordered by last update."""
+        customer = await self.db.get(Customer, customer_id)
+        if not customer:
+            raise ValueError("Customer not found")
+
+        result = await self.db.execute(
+            select(Deal)
+            .where(Deal.customer_id == customer_id)
+            .order_by(Deal.updated_at.desc())
+        )
+        return result.scalars().all()
+
+    async def get_deals_grouped_by_stage(self) -> Dict[DealStage, List[Deal]]:
+        """Return all deals grouped by their pipeline stage."""
+        result = await self.db.execute(
+            select(Deal).order_by(Deal.stage, Deal.updated_at.desc())
+        )
+        deals = result.scalars().all()
+
+        grouped: Dict[DealStage, List[Deal]] = {}
+        for deal in deals:
+            grouped.setdefault(deal.stage, []).append(deal)
+
+        return grouped
