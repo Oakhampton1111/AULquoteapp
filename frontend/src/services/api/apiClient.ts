@@ -67,7 +67,7 @@ export function createApiClient(config: ApiClientConfig): ApiClient {
 
 // Create and export the default API client
 const defaultClient = createApiClient({
-  baseURL: import.meta.env.VITE_API_URL,
+  baseURL: `${import.meta.env.VITE_API_URL}/api/v1`,
 });
 
 export default defaultClient;
