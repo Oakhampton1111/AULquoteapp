@@ -139,13 +139,13 @@ class QuoteLifecycleService:
         crm_service = CRMService(self.db)
         deal_id = updated_quote.deal_id or quote.deal_id
         if deal_id:
-            if status_update.status == "accepted":
+            if status_update.status == "accepted":  # Consider using QuoteStatus.ACCEPTED.value
                 await crm_service.update_deal_stage(
                     deal_id=deal_id,
                     stage=DealStage.CLOSED_WON,
                     agent_id=quote.created_by,
                 )
-            elif status_update.status == "rejected":
+            elif status_update.status == "rejected":  # Consider using QuoteStatus.REJECTED.value
                 await crm_service.update_deal_stage(
                     deal_id=deal_id,
                     stage=DealStage.CLOSED_LOST,
