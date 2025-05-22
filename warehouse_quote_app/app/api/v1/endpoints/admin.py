@@ -23,6 +23,7 @@ from warehouse_quote_app.app.schemas.admin import (
     QuoteResponse,
     QuoteGenerateRequest
 )
+from warehouse_quote_app.app.schemas.rate.rate import RateCreate, RateUpdate
 from warehouse_quote_app.app.schemas.reports.quote_report import QuoteReport
 from warehouse_quote_app.app.schemas.reports.service_report import ServiceReport
 from warehouse_quote_app.app.schemas.reports.customer_report import CustomerReport
@@ -30,6 +31,7 @@ from warehouse_quote_app.app.services.admin import get_admin_service, AdminServi
 from warehouse_quote_app.app.services.rate_admin import get_rate_admin_service, RateAdminService
 from warehouse_quote_app.app.services.quote_generator import get_quote_generator, QuoteGenerator
 from warehouse_quote_app.app.services.audit_logger import get_audit_logger, AuditLogger
+from warehouse_quote_app.app.services.reporting_service import get_reporting_service, ReportingService
 from warehouse_quote_app.app.core.logging import get_logger
 from warehouse_quote_app.app.api.v1.mixins import PaginationMixin, QuoteFilterMixin, CRUDMixin, ReportingMixin
 
@@ -44,6 +46,42 @@ rate_card_crud = CRUDMixin[RateCardCreate, RateAdminService](
     service_dependency=get_rate_admin_service,
     admin_only=True
 )
+
+@router.get("/admin/rates")
+async def list_rates(
+    pagination: dict = Depends(PaginationMixin.paginate),
+    service: RateAdminService = Depends(get_rate_admin_service),
+    current_user: User = Depends(get_current_admin_user)
+) -> Any:
+    return await service.list(skip=pagination["skip"], limit=pagination["limit"])
+
+@router.get("/admin/rates/{rate_id}")
+async def get_rate(
+    rate_id: int,
+    service: RateAdminService = Depends(get_rate_admin_service),
+    current_user: User = Depends(get_current_admin_user)
+) -> Any:
+    rate = await service.get(rate_id)
+    if not rate:
+        raise HTTPException(status_code=404, detail="Rate not found")
+    return rate
+
+@router.post("/admin/rates", status_code=201)
+async def create_rate(
+    rate: Dict[str, Any],
+    service: RateAdminService = Depends(get_rate_admin_service),
+    current_user: User = Depends(get_current_admin_user)
+) -> Any:
+    return await service.create(RateCreate(**rate))
+
+@router.put("/admin/rates/{rate_id}")
+async def update_rate(
+    rate_id: int,
+    rate: Dict[str, Any],
+    service: RateAdminService = Depends(get_rate_admin_service),
+    current_user: User = Depends(get_current_admin_user)
+) -> Any:
+    return await service.update(rate_id, RateUpdate(**rate))
 
 class LoginCredentials(BaseModel):
     email: str
@@ -65,6 +103,14 @@ async def get_metrics(
     """Get admin dashboard metrics."""
     return await admin_service.get_metrics()
 
+@router.get("/admin/dashboard")
+async def admin_dashboard(
+    admin_service: AdminService = Depends(get_admin_service),
+    current_user: User = Depends(get_current_admin_user)
+) -> Dict[str, Any]:
+    """Return admin dashboard data."""
+    return await admin_service.get_dashboard()
+
 @router.get("/admin/customers", response_model=List[CustomerResponse])
 async def list_customers(
     pagination: dict = Depends(PaginationMixin.paginate),
@@ -79,6 +125,37 @@ async def list_customers(
         search=search,
         is_active=is_active
     )
+
+@router.get("/admin/customers/{customer_id}", response_model=CustomerResponse)
+async def get_customer(
+    customer_id: int = Path(..., gt=0),
+    admin_service: AdminService = Depends(get_admin_service),
+    current_user: User = Depends(get_current_admin_user),
+) -> Any:
+    customer = await admin_service.get_customer(customer_id)
+    if not customer:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Customer not found")
+    return customer
+
+@router.post("/admin/customers", response_model=CustomerResponse, status_code=201)
+async def create_customer(
+    customer: Dict[str, Any],
+    admin_service: AdminService = Depends(get_admin_service),
+    current_user: User = Depends(get_current_admin_user),
+) -> Any:
+    return await admin_service.create_customer(customer)
+
+@router.put("/admin/customers/{customer_id}", response_model=CustomerResponse)
+async def update_customer(
+    customer_id: int = Path(..., gt=0),
+    customer: Dict[str, Any] = None,
+    admin_service: AdminService = Depends(get_admin_service),
+    current_user: User = Depends(get_current_admin_user),
+) -> Any:
+    updated = await admin_service.update_customer(customer_id, customer)
+    if not updated:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Customer not found")
+    return updated
 
 @router.get("/admin/quotes", response_model=List[QuoteResponse])
 async def list_quotes(
@@ -156,3 +233,35 @@ async def get_customer_activity(
         date_range,
         format
     )
+
+@router.get("/admin/reports/quotes/status")
+async def get_quote_status_report(
+    reporting: ReportingService = Depends(get_reporting_service),
+    current_user: User = Depends(get_current_admin_user)
+) -> Any:
+    return await reporting.generate_quote_status_report()
+
+@router.get("/admin/reports/revenue")
+async def get_revenue_report(
+    period: str = Query("month"),
+    reporting: ReportingService = Depends(get_reporting_service),
+    current_user: User = Depends(get_current_admin_user)
+) -> Any:
+    return await reporting.generate_revenue_report(period)
+
+@router.get("/admin/quotes/pending", response_model=List[QuoteResponse])
+async def list_pending_quotes(
+    admin_service: AdminService = Depends(get_admin_service),
+    current_user: User = Depends(get_current_admin_user)
+) -> List[QuoteResponse]:
+    return await admin_service.list_pending_quotes()
+
+@router.post("/admin/quotes/{quote_id}/approve")
+async def approve_quote(
+    quote_id: int = Path(..., gt=0),
+    approval: Dict[str, Any] = None,
+    admin_service: AdminService = Depends(get_admin_service),
+    current_user: User = Depends(get_current_admin_user)
+) -> Any:
+    discount = approval.get("approved_discount", 0) if approval else 0
+    return await admin_service.approve_quote(quote_id, discount, approval.get("notes") if approval else None)
