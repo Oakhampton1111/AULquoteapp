@@ -1,60 +1,79 @@
 import React from 'react';
 import { Card, Typography, List, Tag, Divider } from 'antd';
+import { RateCard } from '../../../types/rateCard';
 
 const { Title, Text } = Typography;
 
-export const RateCardViewer: React.FC = () => {
+export interface RateCardViewerProps {
+  rateCard: RateCard;
+}
+
+export const RateCardViewer: React.FC<RateCardViewerProps> = ({ rateCard }) => {
+  const {
+    name,
+    description,
+    baseCost,
+    coverageDetails,
+    durationOptions,
+    restrictions,
+  } = rateCard;
+
   return (
     <Card>
-      <Title level={2}>Available Rate Cards</Title>
-      <List
-        itemLayout="vertical"
-        dataSource={[
-          {
-            id: 'rate-1',
-            name: 'Standard Storage',
-            description: 'Basic coverage for stored vehicles',
-            baseCost: 100,
-            coverageDetails: [
-              { type: 'Damage', description: 'Coverage for damage while in storage', included: true },
-              { type: 'Theft', description: 'Coverage for theft while in storage', included: true }
-            ],
-          },
-          {
-            id: 'rate-2',
-            name: 'Premium Storage',
-            description: 'Enhanced coverage for stored vehicles',
-            baseCost: 200,
-            coverageDetails: [
-              { type: 'Damage', description: 'Coverage for damage while in storage', included: true },
-              { type: 'Theft', description: 'Coverage for theft while in storage', included: true },
-              { type: 'Natural Disasters', description: 'Coverage for natural disasters', included: true }
-            ],
-          }
-        ]}
-        renderItem={(item) => (
-          <List.Item>
-            <Card type="inner" title={item.name}>
-              <Text>{item.description}</Text>
-              <Divider />
-              <Text strong>Base Cost: ${item.baseCost}</Text>
-              <Divider />
-              <Title level={5}>Coverage Details:</Title>
-              <List
-                dataSource={item.coverageDetails}
-                renderItem={(coverage) => (
-                  <List.Item>
-                    <Text>{coverage.type}: {coverage.description}</Text>
-                    <Tag color={coverage.included ? 'green' : 'red'}>
-                      {coverage.included ? 'Included' : 'Not Included'}
-                    </Tag>
-                  </List.Item>
-                )}
-              />
-            </Card>
-          </List.Item>
-        )}
-      />
+      <Title level={3}>{name}</Title>
+      <Text>{description}</Text>
+      <Divider />
+      <Text strong>Base Cost: ${baseCost}</Text>
+      {coverageDetails?.length > 0 && (
+        <>
+          <Divider />
+          <Title level={5}>Coverage Details:</Title>
+          <List
+            dataSource={coverageDetails}
+            renderItem={(coverage) => (
+              <List.Item>
+                <Text>
+                  {coverage.type}: {coverage.description}
+                </Text>
+                <Tag color={coverage.included ? 'green' : 'red'}>
+                  {coverage.included ? 'Included' : 'Not Included'}
+                </Tag>
+              </List.Item>
+            )}
+          />
+        </>
+      )}
+      {durationOptions?.length > 0 && (
+        <>
+          <Divider />
+          <Title level={5}>Duration Options:</Title>
+          <List
+            dataSource={durationOptions}
+            renderItem={(option) => (
+              <List.Item>
+                <Text>{option.months} months</Text>
+                <Tag color="blue">x{option.multiplier}</Tag>
+              </List.Item>
+            )}
+          />
+        </>
+      )}
+      {restrictions && (
+        <>
+          <Divider />
+          <Title level={5}>Restrictions</Title>
+          <List
+            dataSource={Object.entries(restrictions)}
+            renderItem={([key, value]) => (
+              <List.Item>
+                <Text>
+                  {key}: {Array.isArray(value) ? value.join(', ') : value}
+                </Text>
+              </List.Item>
+            )}
+          />
+        </>
+      )}
     </Card>
   );
 };
