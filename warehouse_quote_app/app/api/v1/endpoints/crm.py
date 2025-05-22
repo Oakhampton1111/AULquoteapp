@@ -1,5 +1,5 @@
 """CRM endpoints."""
-from typing import List, Optional
+from typing import List, Optional, Dict
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -125,3 +125,27 @@ def get_customers_with_crm_stats(
     """
     crm_service = CRMService(db)
     return crm_service.get_customers_with_crm_stats(db, skip=skip, limit=limit)
+
+
+@router.get("/customers/{customer_id}/deals", response_model=List[DealRead])
+async def get_customer_deals(
+    customer_id: int,
+    db: AsyncSession = Depends(get_db),
+    _: User = Depends(get_current_user),
+):
+    """List all deals for a customer."""
+    crm_service = CRMService(db)
+    try:
+        return await crm_service.get_customer_deals(customer_id)
+    except ValueError as e:
+        raise HTTPException(status_code=404, detail=str(e))
+
+
+@router.get("/deals/by-stage", response_model=Dict[DealStage, List[DealRead]])
+async def get_deals_grouped_by_stage(
+    db: AsyncSession = Depends(get_db),
+    _: User = Depends(get_current_user),
+):
+    """List all deals grouped by stage."""
+    crm_service = CRMService(db)
+    return await crm_service.get_deals_grouped_by_stage()

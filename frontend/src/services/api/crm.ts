@@ -101,12 +101,22 @@ export const crmApi = {
     return response.data;
   },
 
+  getCustomerDeals: async (customerId: number): Promise<Deal[]> => {
+    const response = await apiClient.get(`/customers/${customerId}/deals`);
+    return response.data;
+  },
+
   updateDeal: async (dealId: number, data: {
     title?: string;
     stage?: DealStage;
     metadata?: Record<string, any>;
   }): Promise<Deal> => {
     const response = await apiClient.patch(`/deals/${dealId}`, data);
+    return response.data;
+  },
+
+  getDealsByStage: async (): Promise<Record<DealStage, Deal[]>> => {
+    const response = await apiClient.get('/deals/by-stage');
     return response.data;
   },
 

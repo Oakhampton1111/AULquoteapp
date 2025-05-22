@@ -61,16 +61,15 @@ export const CustomerProfile: React.FC<CustomerProfileProps> = ({
   const loadCustomerData = async () => {
     setLoading(true);
     try {
-      const [customerStats, customerInteractions] = await Promise.all([
+      const [customerStats, customerInteractions, customerDeals] = await Promise.all([
         crmApi.getCustomerCRMStats(customerId),
-        crmApi.getCustomerInteractions(customerId)
+        crmApi.getCustomerInteractions(customerId),
+        crmApi.getCustomerDeals(customerId)
       ]);
       
       setStats(customerStats);
       setInteractions(customerInteractions);
-      
-      // TODO: Add API endpoint to get customer deals
-      setDeals([]);
+      setDeals(customerDeals);
     } catch (error) {
       message.error('Failed to load customer data');
     } finally {

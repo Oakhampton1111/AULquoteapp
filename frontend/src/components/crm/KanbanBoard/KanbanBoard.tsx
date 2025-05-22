@@ -47,26 +47,17 @@ export const KanbanBoard: React.FC = () => {
   const [stats, setStats] = useState<PipelineStats | null>(null);
 
   useEffect(() => {
-    loadPipelineData();
+    loadBoardData();
   }, []);
 
-  const loadPipelineData = async () => {
+  const loadBoardData = async () => {
     try {
-      const pipelineStats = await crmApi.getPipelineStats();
+      const [pipelineStats, dealsByStage] = await Promise.all([
+        crmApi.getPipelineStats(),
+        crmApi.getDealsByStage()
+      ]);
       setStats(pipelineStats);
-      
-      // TODO: Add API endpoint to get all deals and organize by stage
-      // For now, using stats to show placeholder cards
-      const newStages = { ...stages };
-      pipelineStats.stages.forEach(stageStats => {
-        newStages[stageStats.stage] = Array(stageStats.count).fill({
-          id: 'placeholder',
-          title: 'Loading...',
-          customer: 'Loading...',
-          value: 0
-        });
-      });
-      setStages(newStages);
+      setStages(dealsByStage);
     } catch (error) {
       message.error('Failed to load pipeline data');
     }
@@ -82,14 +73,7 @@ export const KanbanBoard: React.FC = () => {
     try {
       await crmApi.updateDeal(parseInt(dealId), { stage: destStage });
       
-      // Update local state
-      const newStages = { ...stages };
-      const [movedDeal] = newStages[sourceStage].splice(result.source.index, 1);
-      newStages[destStage].splice(result.destination.index, 0, movedDeal);
-      setStages(newStages);
-      
-      // Refresh pipeline stats
-      await loadPipelineData();
+      await loadBoardData();
     } catch (error) {
       message.error('Failed to update deal stage');
     }
