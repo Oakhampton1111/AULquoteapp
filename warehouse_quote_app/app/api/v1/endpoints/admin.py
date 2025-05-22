@@ -60,7 +60,7 @@ async def get_rate(
     rate_id: int,
     service: RateAdminService = Depends(get_rate_admin_service),
     current_user: User = Depends(get_current_admin_user)
-) -> Any:
+) -> RateResponse:
     rate = await service.get(rate_id)
     if not rate:
         raise HTTPException(status_code=404, detail="Rate not found")
