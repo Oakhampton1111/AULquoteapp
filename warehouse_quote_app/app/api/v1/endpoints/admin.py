@@ -87,14 +87,38 @@ class LoginCredentials(BaseModel):
     email: str
     password: str
 
+class SSOLoginCredentials(BaseModel):
+    provider: str
+    token: str
+
 @router.post("/admin/login")
 async def admin_login(
     credentials: LoginCredentials,
     admin_service: AdminService = Depends(get_admin_service)
-) -> Dict[str, str]:
+) -> Dict[str, Any]:
     """Login as admin user."""
-    token = await admin_service.login(credentials.email, credentials.password)
-    return {"access_token": token, "token_type": "bearer"}
+    token, user = await admin_service.login(credentials.email, credentials.password)
+    return {
+        "access_token": token,
+        "token_type": "bearer",
+        "user_id": user.id,
+        "is_admin": user.is_admin,
+    }
+
+
+@router.post("/admin/sso-login")
+async def admin_sso_login(
+    credentials: SSOLoginCredentials,
+    admin_service: AdminService = Depends(get_admin_service)
+) -> Dict[str, Any]:
+    """Login using an SSO token."""
+    token, user = await admin_service.sso_login(credentials.provider, credentials.token)
+    return {
+        "access_token": token,
+        "token_type": "bearer",
+        "user_id": user.id,
+        "is_admin": user.is_admin,
+    }
 
 @router.get("/admin/metrics", response_model=AdminMetricsResponse)
 async def get_metrics(

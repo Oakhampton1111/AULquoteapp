@@ -6,6 +6,7 @@ from typing import List, Optional, Dict, Any
 from datetime import datetime, timedelta
 from decimal import Decimal
 from fastapi import Depends, HTTPException, status
+from warehouse_quote_app.app.services.sso import SSOProvider
 from sqlalchemy.orm import Session
 from warehouse_quote_app.app.core.config import settings
 from warehouse_quote_app.app.database import get_db
@@ -26,7 +27,10 @@ from warehouse_quote_app.app.schemas.admin import (
 from warehouse_quote_app.app.schemas.reports.quote_report import QuoteReport
 from warehouse_quote_app.app.schemas.reports.service_report import ServiceReport
 from warehouse_quote_app.app.schemas.reports.customer_report import CustomerReport
-from warehouse_quote_app.app.core.auth import get_current_admin_user
+from warehouse_quote_app.app.core.auth import (
+    get_current_admin_user,
+    create_access_token,
+)
 from warehouse_quote_app.app.repositories.user import UserRepository
 from warehouse_quote_app.app.repositories.customer import CustomerRepository
 from warehouse_quote_app.app.repositories.quote import QuoteRepository
@@ -39,13 +43,50 @@ class AdminService:
         self.db = db
         self.customers = CustomerRepository(db)
         self.quotes = QuoteRepository(db)
+        self.sso_provider = SSOProvider()
 
-    async def login(self, email: str, password: str) -> str:
-        """Very basic login implementation returning a dummy token."""
-        user = self.db.query(User).filter(User.email == email, User.is_admin == True).first()
-        if not user or not user.verify_password(password):
-            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid credentials")
-        return "dummy-token"
+    async def login(self, email: str, password: str) -> tuple[str, User]:
+        """Authenticate an admin user and return an access token and user."""
+        user = (
+            self.db.query(User)
+            .filter(User.email == email)
+            .first()
+        )
+        if not user or not user.verify_password(password) or not user.is_admin:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Invalid credentials",
+            )
+
+        if not user.is_active:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Inactive admin account",
+            )
+
+        access_token_expires = timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
+        token = create_access_token(
+            {"sub": user.email, "user_id": user.id, "is_admin": True},
+            expires_delta=access_token_expires,
+        )
+
+        user.last_login = datetime.utcnow()
+        self.db.commit()
+        return token, user
+    async def sso_login(self, provider: str, token: str) -> tuple[str, User]:
+        """Authenticate admin via SSO token."""
+        try:
+            info = self.sso_provider.verify_token(provider, token)
+        except Exception as exc:
+            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid SSO token") from exc
+        user = self.db.query(User).filter(User.email == info.get("email")).first()
+        if not user or not user.is_admin:
+            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Unauthorized user")
+        access_token_expires = timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
+        access_token = create_access_token({"sub": user.email, "user_id": user.id, "is_admin": True}, expires_delta=access_token_expires)
+        user.last_login = datetime.utcnow()
+        self.db.commit()
+        return access_token, user
 
     async def get_metrics(self) -> AdminMetricsResponse:
         """Return simple metrics."""
