@@ -38,4 +38,7 @@ __all__ = [
     'ConversationState',
     'ConversationContext',
     'ConversationResponse'
+    'SSOProvider',
 ]
+
+from .sso import SSOProvider
